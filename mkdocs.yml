@@ -1,0 +1,19 @@
+site_name: huayi's notebook
+site_url: https://note.huaeryi.com/
+repo_url: https://github.com/huaeryi/notebook
+
+
+theme: 
+  name: 'material'
+  language: 'zh'
+  features:
+    - navigation.tabs
+
+
+nav:
+  - Home: index.md
+  - 算法笔记: 
+    - 动态规划: dp.md
+  - 体系结构: arc.md
+
+
