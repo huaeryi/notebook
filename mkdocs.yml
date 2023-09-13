@@ -7,13 +7,61 @@ theme:
   name: 'material'
   language: 'zh'
   features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.tracking
     - navigation.tabs
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
 
+    - content.code.copy
+    - content.code.select
+    - content.code.annotate
+    - content.tabs.link
+  font:
+    text: Roboto
+    code: Roboto Mono
+  
+  palette:
+    scheme: default
+    primary: teal
+    accent: teal
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  # - pymdownx.arithmatex:
+  #   generic: true
+
+# extra_javascript:
+#   - javascripts/mathjax.js
+#   - https://polyfill.io/v3/polyfill.min.js?features=es6
+#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+  
 
 nav:
   - Home: index.md
   - 算法笔记: 
-    - 动态规划: dp.md
-  - 体系结构: arc.md
+    - 动态规划: 
+      - 背包dp: dp_pack.md
+    - 并查集: ds_disjoint.md
+    - 树状数组: dp.md
+    - 线段树: dp.md
+    - dfs & bfs: dp.md
+    - 小项: 
+      - 高精度: dp.md
+      - 快速幂: dp.md
+      - gcd & lcm: dp.md
+    - 常用stl库: stl.md
+
 
 
