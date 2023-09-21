@@ -1,4 +1,4 @@
-#### 排序 `sort`
+### 排序 `sort`
 === "C++"
     ``` c++ linenums="1"
     int nums[100];
@@ -11,7 +11,7 @@
     sort(nums, nums + n, cmp);
     ```
 
-#### 二分查找 `lower_bound()` `upper_bound()`
+### 二分查找 `lower_bound()` `upper_bound()`
 === "C++"
     ``` c++ linenums="1"
     #include <algorithm>
@@ -27,7 +27,7 @@
 
 * 可以对比两函数返回值，若不同则找到了a[i] == x，差值即为x的个数
   
-#### set & map
+### set & map
 === "C++"
     ``` c++ linenums="1"
     set<int> st;

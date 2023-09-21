@@ -1,7 +1,19 @@
-site_name: huayi's notebook
+site_name: Huayi's Notebook
 site_url: https://note.huaeryi.com/
 repo_url: https://github.com/huaeryi/notebook
 
+nav:
+  - Home: index.md
+  - 算法笔记: 
+    - 动态规划: 
+      - 背包dp: dp/dp_pack.md
+    - 并查集: ds/ds_disjoint.md
+    - 树状数组: ds/tree_array.md
+    - 线段树: ds/segment_tree.md
+    - 搜索: search/dfs.md
+    - 小项: other.md
+    - 常用stl库: stl.md
+  - 系统安全: dp.md
 
 theme: 
   name: 'material'
@@ -28,7 +40,25 @@ theme:
     primary: teal
     accent: teal
 
+  icon:
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -38,30 +68,14 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
-  # - pymdownx.arithmatex:
-  #   generic: true
 
-# extra_javascript:
-#   - javascripts/mathjax.js
-#   - https://polyfill.io/v3/polyfill.min.js?features=es6
-#   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-  
-
-nav:
-  - Home: index.md
-  - 算法笔记: 
-    - 动态规划: 
-      - 背包dp: dp_pack.md
-    - 并查集: ds_disjoint.md
-    - 树状数组: dp.md
-    - 线段树: dp.md
-    - dfs & bfs: dp.md
-    - 小项: 
-      - 高精度: dp.md
-      - 快速幂: dp.md
-      - gcd & lcm: dp.md
-    - 常用stl库: stl.md
+  - pymdownx.arithmatex:
+      generic: true
 
 
 
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
