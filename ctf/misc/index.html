@@ -14,13 +14,15 @@
         <link rel="prev" href="../../stl/">
       
       
+        <link rel="next" href="../crypto/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>misc - Huayi's Notebook</title>
+        <title>Misc - Huayi's Notebook</title>
       
     
     
@@ -146,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              misc
+              Misc
             
           </span>
         </div>
@@ -608,6 +610,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -653,7 +657,7 @@
           
   
   <span class="md-ellipsis">
-    misc
+    Misc
   </span>
   
 
@@ -664,7 +668,7 @@
         
   
   <span class="md-ellipsis">
-    misc
+    Misc
   </span>
   
 
@@ -734,6 +738,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    Unix时间戳
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     图片修复
   </a>
@@ -754,9 +765,50 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     压缩文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    流量取证
+  </a>
+  
+    <nav class="md-nav" aria-label="流量取证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireshark" class="md-nav__link">
+    借助wireshark抓取流量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    数据提取
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    wifi流量破解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb" class="md-nav__link">
+    USB流量包
   </a>
   
 </li>
@@ -770,6 +822,26 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crypto/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Crypto
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -857,6 +929,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#unix" class="md-nav__link">
+    Unix时间戳
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
     图片修复
   </a>
@@ -877,9 +956,50 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
     压缩文件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    流量取证
+  </a>
+  
+    <nav class="md-nav" aria-label="流量取证">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wireshark" class="md-nav__link">
+    借助wireshark抓取流量
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    数据提取
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wifi" class="md-nav__link">
+    wifi流量破解
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usb" class="md-nav__link">
+    USB流量包
   </a>
   
 </li>
@@ -907,7 +1027,7 @@
   
 
 
-  <h1>misc</h1>
+  <h1>Misc</h1>
 
 <h3 id="_1">文件类型</h3>
 <ul>
@@ -918,7 +1038,8 @@
 <h3 id="_2">文件分离</h3>
 <ul>
 <li><code>binwalk &lt;文件名&gt;</code> 分析文件由其他文件合并</li>
-<li><code>binwalk -e &lt;文件名&gt;</code> 分离文件�����oremost &lt;文件名&gt; -o &lt;输出文件名&gt;` 分离文件</li>
+<li><code>binwalk -e &lt;文件名&gt;</code> 分离文件</li>
+<li><code>foremost &lt;文件名&gt; -o &lt;输出文件名&gt;</code> 分离文件</li>
 <li><code>dd if=&lt;源文件&gt; of=&lt;目标文件&gt; bs=每块字节数&lt;&gt; count=&lt;取多少块&gt; skip=&lt;跳过多少块&gt;</code></li>
 <li>winhex手动分离</li>
 </ul>
@@ -940,6 +1061,11 @@
 <li>显示一些图片的定位等信息</li>
 <li><code>exiftool &lt;图片&gt;</code> 查看exif信息 </li>
 </ul>
+<h4 id="unix">Unix时间戳</h4>
+<ul>
+<li>Unix 时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒</li>
+<li>格式1984:08:03 18:41:46+08:00 换算时区</li>
+</ul>
 <h4 id="_6">图片修复</h4>
 <ul>
 <li>stegsolve xor add sub运算</li>
@@ -953,7 +1079,7 @@
 <h4 id="_7">图片加密</h4>
 <ul>
 <li>TweakPNG可以打开文件头正常却CRC校验出错的文件</li>
-<li>也可以用python脚本检测CRC正常却长宽错误的文件</li>
+<li>也可以用python爆破脚本检测CRC正常却长宽错误的文件</li>
 <li>bftools在win下解密图片信息</li>
 <li>silenteye用于隐藏文字和文件到图片</li>
 <li>stegdetect专门用于jpg图像加密，可识别如下隐写算法</li>
@@ -962,11 +1088,41 @@
 <li>F5</li>
 <li>二维码扫描工具CQR</li>
 </ul>
-<h4 id="_8">压缩文件</h4>
+<h3 id="_8">压缩文件</h3>
 <ul>
 <li>伪加密，zip文件是否加密是通过标识符来显示的，0000代表未加密，rar</li>
 <li>暴力破解ARCHPR.exe</li>
-<li>压缩文件可能解压后确实，有人恶意写文件头，原本的文件头应当以0x74结尾</li>
+<li>压缩文件可能解压后缺失，有人恶意写文件头，原本的文件头应当以0x74结尾</li>
+<li>暴力破解ziperello</li>
+</ul>
+<h3 id="_9">流量取证</h3>
+<h4 id="wireshark">借助wireshark抓取流量</h4>
+<ul>
+<li>.pcap文件</li>
+<li>过滤ip <code>ip.src eq xxxx or ip.dst eq xxxx</code></li>
+<li>过滤端口 <code>tcp.port == 80</code></li>
+<li>过滤协议 <code>tcp udp</code></li>
+<li>过滤MAC地址 <code>eth.dst</code></li>
+<li>过滤长度</li>
+<li>http模式过滤</li>
+<li>http和tcp流汇聚</li>
+</ul>
+<h4 id="_10">数据提取</h4>
+<ul>
+<li>导出http对象</li>
+<li>导出分组对象</li>
+</ul>
+<h4 id="wifi">wifi流量破解</h4>
+<ul>
+<li><code>aircrack-ng &lt;xxx.cap&gt;</code></li>
+<li>文件可以直接拖入kali</li>
+</ul>
+<h4 id="usb">USB流量包</h4>
+<ul>
+<li>导出csv</li>
+<li><code>tshark</code></li>
+<li>键盘流量</li>
+<li>鼠标流量</li>
 </ul>
 
 
