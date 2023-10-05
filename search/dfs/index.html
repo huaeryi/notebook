@@ -377,10 +377,6 @@
       
         
       
-        
-      
-        
-      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -480,6 +476,48 @@
   
   
   
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数据结构
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            数据结构
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../ds/ds_disjoint/" class="md-nav__link">
         
@@ -530,6 +568,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -664,6 +710,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -723,6 +771,26 @@
   
   <span class="md-ellipsis">
     Crypto
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ctf/web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Web
   </span>
   
 
@@ -800,8 +868,12 @@
 <h2 id="dfs">dfs</h2>
 <ul>
 <li>dfs的常用方法在于维护一个全局数组，对访问过的节点标记处理，利用递归搜索，回溯后清除标记</li>
+<li>要注意常规的暴力dfs通常会TLE，所以dfs的关键在于剪枝，可以通过dfs函数中提早的return来剪枝，这通常是通过对题目的具体分析以及各种预处理实现的，如前缀和</li>
 </ul>
 <h2 id="bfs">bfs</h2>
+<ul>
+<li>bfs的实现通常是使用队列，将相邻节点入队同时处理队列最前的节点，直到队列为空</li>
+</ul>
 
 
 
