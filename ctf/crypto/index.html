@@ -774,8 +774,83 @@
         
           <li class="md-nav__item">
   <a href="#ascii" class="md-nav__link">
-    ASCII码
+    ASCII
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latin-1" class="md-nav__link">
+    Latin-1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    Unicode
+  </a>
+  
+    <nav class="md-nav" aria-label="Unicode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utf-8" class="md-nav__link">
+    UTF-8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utf-16" class="md-nav__link">
+    UTF-16
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utf-32" class="md-nav__link">
+    UTF-32
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gb" class="md-nav__link">
+    GB系列
+  </a>
+  
+    <nav class="md-nav" aria-label="GB系列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gb-1312" class="md-nav__link">
+    GB 1312
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gbk" class="md-nav__link">
+    GBK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gb18030" class="md-nav__link">
+    GB18030
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -789,13 +864,6 @@
           <li class="md-nav__item">
   <a href="#url" class="md-nav__link">
     URL编码
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unicode" class="md-nav__link">
-    Unicode编码
   </a>
   
 </li>
@@ -997,8 +1065,83 @@
         
           <li class="md-nav__item">
   <a href="#ascii" class="md-nav__link">
-    ASCII码
+    ASCII
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#latin-1" class="md-nav__link">
+    Latin-1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unicode" class="md-nav__link">
+    Unicode
+  </a>
+  
+    <nav class="md-nav" aria-label="Unicode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#utf-8" class="md-nav__link">
+    UTF-8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utf-16" class="md-nav__link">
+    UTF-16
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utf-32" class="md-nav__link">
+    UTF-32
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gb" class="md-nav__link">
+    GB系列
+  </a>
+  
+    <nav class="md-nav" aria-label="GB系列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gb-1312" class="md-nav__link">
+    GB 1312
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gbk" class="md-nav__link">
+    GBK
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gb18030" class="md-nav__link">
+    GB18030
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1012,13 +1155,6 @@
           <li class="md-nav__item">
   <a href="#url" class="md-nav__link">
     URL编码
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unicode" class="md-nav__link">
-    Unicode编码
   </a>
   
 </li>
@@ -1147,10 +1283,60 @@
 <ul>
 <li><a href="https://icyberchef.com/">cyberchef</a></li>
 <li><a href="http://www.hiencode.com/">在线工具包</a></li>
-<li><a href="https://www.cmd5.com/">枚举解密</a></li>
+<li><a href="https://www.cmd5.com/">md5解密</a></li>
 </ul>
 <h3 id="_2">常见编码</h3>
-<h4 id="ascii">ASCII码</h4>
+<h4 id="ascii">ASCII</h4>
+<ul>
+<li>ASCII (American Standard Code for Information Interchange)：美国信息交换标准代码</li>
+<li></li>
+</ul>
+<h4 id="latin-1">Latin-1</h4>
+<ul>
+<li>Latin-1也即ISO-8859-1编码是单字节编码，向下兼容ASCII，其编码范围是0x00-0xFF，0x00-0x7F之间完全和ASCII一致，0x80-0x9F之间是控制字符，0xA0-0xFF之间是文字符号</li>
+</ul>
+<h4 id="unicode">Unicode</h4>
+<ul>
+<li>统一的编码标准，下述编码是它的实现方式</li>
+<li>16位含 \uxxxx</li>
+<li><code>&amp;#124;</code></li>
+</ul>
+<details class="info" open="open">
+<summary>字节序</summary>
+<ul>
+<li>对于多字节编码而言，字节序有大端小端之分，字节序指的是多字节编码中以字节为单位排布的顺序，即8bit为一组，字节内部的顺序是不变的 大端法的<code>2F 45 3A 0D</code> 小端法就是<code>0D 3A 45 2F</code></li>
+</ul>
+</details>
+<h5 id="utf-8">UTF-8</h5>
+<ul>
+<li>UTF-8编码规则：如果只有一个字节则其最高二进制位为0；如果是多字节，其第一个字节从最高位开始，连续的二进制位值为1的个数决定了其编码的字节数，其余各字节均以10开头</li>
+<li><code>0xxxxxxx</code>：单字节编码形式;</li>
+<li><code>110xxxxx 10xxxxxx</code>：双字节编码形式;</li>
+<li><code>1110xxxx 10xxxxxx 10xxxxxx</code>：三字节编码形式;</li>
+<li><code>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</code>：四字节编码形式</li>
+</ul>
+<h5 id="utf-16">UTF-16</h5>
+<ul>
+<li>UTF-16是UNICODE编码实现方式之一，该编码长度既是可变，亦是固定：采用存储的字节长度，要么是2Byte ，要么是4Byte。</li>
+</ul>
+<h5 id="utf-32">UTF-32</h5>
+<ul>
+<li>每个字符都采用 4byte 字节来存储，容易造成存储空间的浪费</li>
+</ul>
+<h4 id="gb">GB系列</h4>
+<h5 id="gb-1312">GB 1312</h5>
+<ul>
+<li>1980 年，中国发布了第一个汉字编码标准，也即 GB2312 ，全称 《信息交换用汉字编码字符集·基本集》，通常简称 GB （“国标”汉语拼音首字母）， 共收录了 6763 个常用的汉字和字符，此标准于次年5月实施，它满足了日常 99% 汉字的使用需求</li>
+<li>GB2312 把每个汉字都编码成两个字节，第一个字节是高位字节，第二个字节是低位字节</li>
+</ul>
+<h5 id="gbk">GBK</h5>
+<ul>
+<li>GBK 也是双字节编码，为了向下兼容 GB2312， GBK 使用了 GB2312 没有用到的编码区域，总的编码范围是: 第一个字节 0x81–0xFE，第二个字节 0x40–0xFE</li>
+</ul>
+<h5 id="gb18030">GB18030</h5>
+<ul>
+<li>与 GBK 不同的是，GB18030 是变长多字节字符集，每个字或字符可以由一个，两个或四个字节组成，所以它的编码空间是很大的，最多可以容纳 161 万个字符，由于需要兼容 GBK，四个字节的前两个字节和 GBK 编码保持一致</li>
+</ul>
 <h4 id="base64">Base64</h4>
 <ul>
 <li>3 * 8 -&gt; 4 * 6</li>
@@ -1159,11 +1345,6 @@
 <h4 id="url">URL编码</h4>
 <ul>
 <li>ASCII码的十六进制，加上%</li>
-</ul>
-<h4 id="unicode">Unicode编码</h4>
-<ul>
-<li>16位含 \uxxxx</li>
-<li><code>&amp;#124;</code></li>
 </ul>
 <h4 id="_3">摩斯电码</h4>
 <h4 id="js">JS混淆</h4>
