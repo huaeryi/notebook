@@ -41,3 +41,12 @@
       cout << it->second << endl;
     }
     ```
+
+### deque
+=== "C++"
+
+    ``` c++ linenums="1"
+    deque<pair<int, int> > dq;
+    dq.push_back(pair<int, int>(i, j));
+    ```
+

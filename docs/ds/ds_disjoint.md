@@ -2,6 +2,7 @@
 ???+ note "disjoint"
 
     === "C++"
+    
         ``` c++ linenums="1"
         #include<bits/stdc++.h>
 

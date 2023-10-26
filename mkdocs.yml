@@ -7,16 +7,29 @@ nav:
   - 算法笔记: 
     - 动态规划: 
       - 背包dp: dp/dp_pack.md
-    - 并查集: ds/ds_disjoint.md
-    - 树状数组: ds/tree_array.md
-    - 线段树: ds/segment_tree.md
+    - 数据结构:
+      - 并查集: ds/ds_disjoint.md
+      - 树状数组: ds/tree_array.md
+      - 线段树: ds/segment_tree.md
     - 搜索: search/dfs.md
     - 小项: other.md
     - 常用stl库: stl.md
-  - 系统安全: dp.md
+  - 系统安全: 
+    - Tools: ctf/tools.md
+    - Misc: ctf/misc.md
+    - Crypto: ctf/crypto.md
+    - Web: ctf/web.md
+    - Reverse: ctf/reverse.md
+    - Pwn: ctf/pwn.md
+    - Android: ctf/android.md
+    - OSINT: ctf/osint.md
+  - CTF赛题收录:
+    - Hackgame2023: ctf_contest/hackgame2023.md
+
 
 theme: 
   name: 'material'
+  custom_dir: overrides
   language: 'zh'
   features:
     - navigation.instant
@@ -34,13 +47,13 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  
+    
   palette:
-    scheme: default
-    primary: teal
-    accent: teal
+    primary: black  
+    # accent: white
 
   icon:
+    logo: material/notebook-outline
     admonition:
       note: octicons/tag-16
       abstract: octicons/checklist-16
