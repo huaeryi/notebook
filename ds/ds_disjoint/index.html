@@ -84,10 +84,12 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=LXGW+WenKai+GB+Screen:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"LXGW WenKai GB Screen";--md-code-font:"JetBrains Mono"}</style>
       
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -104,7 +106,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="huayi" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -228,7 +230,7 @@
   
     
   
-  Home
+  🏠Home
 
       </a>
     </li>
@@ -252,12 +254,12 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../dp/dp_pack/" class="md-tabs__link">
+        <a href="../../dp/dp/" class="md-tabs__link">
           
   
     
   
-  算法笔记
+  📖算法笔记
 
         </a>
       </li>
@@ -280,7 +282,7 @@
   
     
   
-  系统安全
+  🚩系统安全
 
         </a>
       </li>
@@ -300,7 +302,7 @@
   
     
   
-  CTF赛题收录
+  💾CTF赛题收录
 
         </a>
       </li>
@@ -363,7 +365,7 @@
         
   
   <span class="md-ellipsis">
-    Home
+    🏠Home
   </span>
   
 
@@ -406,7 +408,7 @@
             
   
   <span class="md-ellipsis">
-    算法笔记
+    📖算法笔记
   </span>
   
 
@@ -416,7 +418,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
-            算法笔记
+            📖算法笔记
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -427,6 +429,8 @@
   
     
     
+      
+        
       
         
       
@@ -457,6 +461,26 @@
             动态规划
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dp/dp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    动态规划简介
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -697,6 +721,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -711,7 +737,7 @@
             
   
   <span class="md-ellipsis">
-    系统安全
+    🚩系统安全
   </span>
   
 
@@ -721,7 +747,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            系统安全
+            🚩系统安全
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -851,6 +877,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../ctf/blockchain/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Blockchain
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../ctf/android/" class="md-nav__link">
         
   
@@ -916,7 +962,7 @@
             
   
   <span class="md-ellipsis">
-    CTF赛题收录
+    💾CTF赛题收录
   </span>
   
 
@@ -926,7 +972,7 @@
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            CTF赛题收录
+            💾CTF赛题收录
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -996,8 +1042,6 @@
 <ul>
 <li>并查集的实现是一个森林，其中每个节点1-n刚开始都是独立的树的根节点，通过维护一个父节点数组来体现哪些节点在一棵树上，一个最基本的带有find和unite操作的并查集实现如下</li>
 </ul>
-<details class="note" open="open">
-<summary>disjoint</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -1052,7 +1096,6 @@
 </div>
 </div>
 </div>
-</details>
 
 
 
