@@ -23,6 +23,9 @@
     //取得最小的下标i使 a[i] > x
     upper_bound(a,a+n,x)-a      //下标从0开始
     upper_bound(a+1,a+n+1,x)-a  //下标从1开始
+
+    lower_bound(a,a+n,x, greater<int>())  //内置类型从大到小排序
+    lower_bound(a,a+n,x, less<int>())  //内置类型从小到大排序
     ```
 
 * 可以对比两函数返回值，若不同则找到了a[i] == x，差值即为x的个数

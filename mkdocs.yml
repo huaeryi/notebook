@@ -1,11 +1,16 @@
 site_name: Huayi's Notebook
 site_url: https://note.huaeryi.com/
+repo_name: huayi/notebook
 repo_url: https://github.com/huaeryi/notebook
+edit_uri: tree/master/docs
+site_description: huayi的笔记本
+copyright: Copyright &copy; 2022-2023 <a href="https://github.com/huaeryi" target="_blank" rel="noopener">huayi</a>
 
 nav:
-  - Home: index.md
-  - 算法笔记: 
+  - 🏠Home: index.md
+  - 📖算法笔记: 
     - 动态规划: 
+      - 动态规划简介: dp/dp.md
       - 背包dp: dp/dp_pack.md
     - 数据结构:
       - 并查集: ds/ds_disjoint.md
@@ -14,16 +19,17 @@ nav:
     - 搜索: search/dfs.md
     - 小项: other.md
     - 常用stl库: stl.md
-  - 系统安全: 
+  - 🚩系统安全: 
     - Tools: ctf/tools.md
     - Misc: ctf/misc.md
     - Crypto: ctf/crypto.md
     - Web: ctf/web.md
     - Reverse: ctf/reverse.md
     - Pwn: ctf/pwn.md
+    - Blockchain: ctf/blockchain.md
     - Android: ctf/android.md
     - OSINT: ctf/osint.md
-  - CTF赛题收录:
+  - 💾CTF赛题收录:
     - Hackgame2023: ctf_contest/hackgame2023.md
 
 
@@ -44,13 +50,27 @@ theme:
     - content.code.select
     - content.code.annotate
     - content.tabs.link
-  font:
-    text: Roboto
-    code: Roboto Mono
+  font: false
+    # text: Roboto
+    # code: Roboto Mono
+    # text: 'JetBrains Mono' # Share Tech
+    # code: JetBrains Mono
     
   palette:
-    primary: black  
-    # accent: white
+    scheme: huayi
+    # - media: "(prefers-color-scheme: light)"
+    #   scheme: huayi
+    #   toggle:
+    #     icon: material/brightness-7
+    #     name: Switch to dark mode
+
+    # # Palette toggle for dark mode
+    # - media: "(prefers-color-scheme: dark)"
+    #   scheme: huayi
+    #   toggle:
+    #     icon: material/brightness-4
+    #     name: Switch to light mode
+
 
   icon:
     logo: material/notebook-outline
@@ -92,3 +112,6 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css

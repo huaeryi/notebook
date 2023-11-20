@@ -1,0 +1,40 @@
+:root {
+  --md-text-font: "JetBrains Mono", "LXGW WenKai"; 
+  --md-code-font: "JetBrains Mono";
+}
+
+@media screen and (min-width: 960px) {
+  /* body {
+    zoom: 1.1;
+  } */
+  html {
+    font-size: 137.5%;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: 137.5%;
+  }
+}
+
+@media screen and (min-width: 125em) {
+  html {
+    font-size: 137.5%;
+  }
+}
+
+[data-md-color-scheme="huayi"] {
+  /* --md-primary-fg-color:        #E6E6FA; */
+  /* --md-primary-fg-color:        #B0C4DE; */
+  --md-primary-fg-color:        #5F9EA0;
+  --md-primary-fg-color--light: #AFEEEE;
+  --md-primary-fg-color--dark:  #AFEEEE;
+}
+
+
+/* [data-md-color-scheme="youtube"] {
+  --md-primary-fg-color:        #EE0F0F;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+} */

@@ -1,3 +1,6 @@
+### 靶场搭建
+* phpstudy搭建本地容器
+* Dvwa
 ### Chorme开发人员工具
 * 右键`检查`或`Crtl + Shift + I`打开开发人员工具
 * Hackbar插件集成了常用的web请求、攻击手段
@@ -175,6 +178,7 @@
 * 上传shell.war获取shell
 
 
+### WAF绕过
 
 ### Web夺权模板
 #### 信息探测

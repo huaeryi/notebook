@@ -121,6 +121,10 @@
 ### 音频隐写
 #### MP3隐写
 * Mp3Stego
+#### SSTV
+* 慢扫描电视（Slow-scan television 简称SSTV）是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。
+* 使用工具：MMSSTV接收图片 e2eSoft虚拟声卡
+* 文件类型：wav
 
 ### img
 * 回环设备
@@ -141,3 +145,9 @@
 ### pyc反编译
 * uncompyle6
 * [在线工具](https://tool.lu/pyc/)
+
+### git回滚
+* `git log`
+* `git reflog`
+* `git reset --hard xxxxxx`
+
