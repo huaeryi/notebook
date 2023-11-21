@@ -1,22 +1,25 @@
-将于**赛后**收录Hackergame2023的好题
+???+ abstract
 
-![](https:/img.shields.io/badge/-Misc-informational?style=flat-square)
-![](https://img.shields.io/badge/-Crypto-red?style=flat-square)
-![](https://img.shields.io/badge/-Web-blueviolet?style=flat-square)
-![](https://img.shields.io/badge/-Reverse-violet?style=flat-square)
-![](https://img.shields.io/badge/-Pwn-grey?style=flat-square)
-![](https://img.shields.io/badge/-Blockchain-darkorange?style=flat-square)
-![](https://img.shields.io/badge/-Android-green?style=flat-square)
-![](https://img.shields.io/badge/-OSINT-informational?style=flat-square)
+    将于赛后收录Hackergame2023的好题
 
-* 本note更新时间在赛后
-* 施工中>>>
+    ![](https:/img.shields.io/badge/-Misc-informational?style=flat-square)
+    ![](https://img.shields.io/badge/-Crypto-red?style=flat-square)
+    ![](https://img.shields.io/badge/-Web-blueviolet?style=flat-square)
+    ![](https://img.shields.io/badge/-Reverse-violet?style=flat-square)
+    ![](https://img.shields.io/badge/-Pwn-grey?style=flat-square)
+    ![](https://img.shields.io/badge/-Blockchain-darkorange?style=flat-square)
+    ![](https://img.shields.io/badge/-Android-green?style=flat-square)
+    ![](https://img.shields.io/badge/-OSINT-darkblue?style=flat-square)
+    ![](https://img.shields.io/badge/-AI-brown?style=flat-square)
+
+    * 本note更新时间在赛后
+    * 🚧施工中>>>
 
 ### Hackergame 启动 ![](https://img.shields.io/badge/-Web-blueviolet?style=flat-square)
 * 首先大喊Hackergame启动，url栏末尾出现`/?similarity=`
 * 修改`/?similarity=100`即可获取flag
 
-### 猫咪小测 ![](https://img.shields.io/badge/-OSINT-informational?style=flat-square)
+### 猫咪小测 ![](https://img.shields.io/badge/-OSINT-darkblue?style=flat-square)
 Q1 想要借阅世界图书出版公司出版的《A Classical Introduction To Modern Number Theory 2nd ed.》，应当前往中国科学技术大学西区图书馆的哪一层？
 
 * 搜索`中国科学技术大学西区图书馆`发现网页[西区图书馆简介](https://lib.ustc.edu.cn/%E6%9C%AC%E9%A6%86%E6%A6%82%E5%86%B5/%E5%9B%BE%E4%B9%A6%E9%A6%86%E6%A6%82%E5%86%B5%E5%85%B6%E4%BB%96%E6%96%87%E6%A1%A3/%E8%A5%BF%E5%8C%BA%E5%9B%BE%E4%B9%A6%E9%A6%86%E7%AE%80%E4%BB%8B/)
@@ -38,7 +41,7 @@ Q4 🥒🥒🥒：「我……从没觉得写类型标注有意思过」。在�
 ### 更深更暗 ![](https://img.shields.io/badge/-Web-blueviolet?style=flat-square)
 * `Crtl + a` `Crtl + c` `Crtl + v`粘贴即可获得flag
 
-### 旅行照片 3.0(2/3) ![](https://img.shields.io/badge/-OSINT-informational?style=flat-square)
+### 旅行照片 3.0(2/3) ![](https://img.shields.io/badge/-OSINT-darkblue?style=flat-square)
 #### 神秘奖牌
 * 含有奖牌的图中是诺贝尔物理学奖和诺贝尔化学奖奖牌，根据题意，学长是东京大学学生，因此搜索东京大学诺贝尔奖得主，发现符号条件且出生最晚是`梶田隆章 1959.3 东京大学`，研究所名为**ICRR**，东京大学宇宙射线研究所
 
@@ -132,7 +135,7 @@ setInterval(function() {
 * 查找删除多余的数据
 * `nodejs flag.js`得到flag
 
-### 🪐 小型大语言模型星球（2/4） ![](https://img.shields.io/badge/-Misc-informational?style=flat-square)
+### 🪐 小型大语言模型星球（2/4）![](https://img.shields.io/badge/-AI-brown?style=flat-square)
 #### You Are Smart
 * 输入`Am I smart?`
 
@@ -228,7 +231,7 @@ for w in range(1500, 2000):
 ### 🪐 低带宽星球(1/2) ![](https://img.shields.io/badge/-Misc-informational?style=flat-square)
 * 第一问扔一个压缩网站里面就好了
 
-### 为什么要打开 /flag 😡(1/2) ![](https://img.shields.io/badge/-Pwn-grey?style=flat-square)
+### 为什么要打开 /flag 😡(1/2) ![](https://img.shields.io/badge/-Reverse-violet?style=flat-square)
 * 想过打包main和动态链接库（但没用）
 * 想过在根目录写入动态链接库（但Read Only）
 * 想过运行时改变环境变量LD_PRELOAD（但已经迟了）

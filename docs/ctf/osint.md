@@ -1,8 +1,10 @@
-> 开源网络情报(Open source intelligence)，简称OSINT
+???+ abstract
 
-> 和misc类题关联度较高
+    * 开源网络情报(Open source intelligence)，简称OSINT
 
-> 仅用于虚拟的题目、比赛和信息检索，公开泄露隐私是违法行为！
+    * 和misc类题关联度较高
+
+    * 仅用于虚拟的题目、比赛和信息检索，公开泄露隐私是违法行为！
 
 ### 常用工具
 #### 搜索

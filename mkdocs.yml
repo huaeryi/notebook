@@ -9,7 +9,7 @@ copyright: Copyright &copy; 2022-2023 <a href="https://github.com/huaeryi" targe
 nav:
   - 🏠Home: index.md
   - 📖算法笔记: 
-    - 动态规划: 
+    - 动态规划:
       - 动态规划简介: dp/dp.md
       - 背包dp: dp/dp_pack.md
     - 数据结构:
