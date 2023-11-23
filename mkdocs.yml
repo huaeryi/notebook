@@ -1,6 +1,6 @@
 site_name: Huayi's Notebook
 site_url: https://note.huaeryi.com/
-repo_name: huayi/notebook
+repo_name: huaeryi/notebook
 repo_url: https://github.com/huaeryi/notebook
 edit_uri: tree/master/docs
 site_description: huayi的笔记本
@@ -57,6 +57,9 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.top
+    - navigation.footer
+
+    - toc.follow
 
     - content.code.copy
     - content.code.select
@@ -116,9 +119,23 @@ markdown_extensions:
 
   - pymdownx.arithmatex:
       generic: true
+    
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  - tables
 
 
 
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/huaeryi
+    - icon: fontawesome/solid/blog
+      link: https://blog.huaeryi.top
+    - icon: fontawesome/solid/book
+      link: https://note.huaeryi.top  
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -132,3 +149,4 @@ extra_css:
   # - https://cdn.jsdelivr.net/npm/lxgw-wenkai-tc-webfont@1.0.0/style.css
   - https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css
   - https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css
+
