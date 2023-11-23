@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://note.huaeryi.com/ctf/misc/">
+        <link rel="canonical" href="https://note.huaeryi.com/ctf/cve/">
       
       
-        <link rel="prev" href="../tools/">
+        <link rel="prev" href="../osint/">
       
       
-        <link rel="next" href="../crypto/">
+        <link rel="next" href="CVE-2017-11610/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Misc - Huayi's Notebook</title>
+        <title>CVE - Huayi's Notebook</title>
       
     
     
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#cve" class="md-skip">
           跳转至
         </a>
       
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Misc
+              CVE
             
           </span>
         </div>
@@ -818,27 +818,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Misc
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../misc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -847,339 +829,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    搜索
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    文件类型
-  </a>
-  
-    <nav class="md-nav" aria-label="文件类型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sav" class="md-nav__link">
-    .sav
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    文件分离
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    文件合并
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    图片隐写
-  </a>
-  
-    <nav class="md-nav" aria-label="图片隐写">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#png" class="md-nav__link">
-    PNG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jpg" class="md-nav__link">
-    JPG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gif" class="md-nav__link">
-    GIF
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    细微颜色差别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    盲水印
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gif_1" class="md-nav__link">
-    gif多帧隐藏
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exif" class="md-nav__link">
-    Exif信息隐藏
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unix" class="md-nav__link">
-    Unix时间戳
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    图片修复
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lsb" class="md-nav__link">
-    最低有效位LSB隐写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    图片加密
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    压缩文件
-  </a>
-  
-    <nav class="md-nav" aria-label="压缩文件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zip" class="md-nav__link">
-    ZIP
-  </a>
-  
-    <nav class="md-nav" aria-label="ZIP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    暴力破解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    明文攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    伪加密
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rar" class="md-nav__link">
-    RAR
-  </a>
-  
-    <nav class="md-nav" aria-label="RAR">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    暴力破解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    伪加密
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    流量取证
-  </a>
-  
-    <nav class="md-nav" aria-label="流量取证">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wireshark" class="md-nav__link">
-    借助wireshark抓取流量
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    数据提取
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wifi" class="md-nav__link">
-    wifi流量破解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usb" class="md-nav__link">
-    USB流量包
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    音频隐写
-  </a>
-  
-    <nav class="md-nav" aria-label="音频隐写">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mp3" class="md-nav__link">
-    MP3隐写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sstv" class="md-nav__link">
-    SSTV
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#img" class="md-nav__link">
-    img
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ntfs" class="md-nav__link">
-    ntfs数据流
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qr" class="md-nav__link">
-    QR二维码
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#0" class="md-nav__link">
-    0宽隐写
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pyc" class="md-nav__link">
-    pyc反编译
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    git回滚
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1389,6 +1038,8 @@
                 
   
   
+    
+  
   
     
     
@@ -1401,18 +1052,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_11" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cve/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   <span class="md-ellipsis">
@@ -1422,13 +1073,13 @@
 
             </a>
             
-              <label class="md-nav__link " for="__nav_3_11">
+              <label class="md-nav__link md-nav__link--active" for="__nav_3_11">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_11">
             <span class="md-nav__icon md-icon"></span>
             CVE
@@ -1443,7 +1094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cve/CVE-2017-11610/" class="md-nav__link">
+      <a href="CVE-2017-11610/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1568,329 +1219,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    搜索
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    文件类型
-  </a>
-  
-    <nav class="md-nav" aria-label="文件类型">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sav" class="md-nav__link">
-    .sav
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    文件分离
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    文件合并
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    图片隐写
-  </a>
-  
-    <nav class="md-nav" aria-label="图片隐写">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#png" class="md-nav__link">
-    PNG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jpg" class="md-nav__link">
-    JPG
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gif" class="md-nav__link">
-    GIF
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    细微颜色差别
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    盲水印
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gif_1" class="md-nav__link">
-    gif多帧隐藏
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exif" class="md-nav__link">
-    Exif信息隐藏
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#unix" class="md-nav__link">
-    Unix时间戳
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    图片修复
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#lsb" class="md-nav__link">
-    最低有效位LSB隐写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
-    图片加密
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
-    压缩文件
-  </a>
-  
-    <nav class="md-nav" aria-label="压缩文件">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zip" class="md-nav__link">
-    ZIP
-  </a>
-  
-    <nav class="md-nav" aria-label="ZIP">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
-    暴力破解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    明文攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
-    伪加密
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rar" class="md-nav__link">
-    RAR
-  </a>
-  
-    <nav class="md-nav" aria-label="RAR">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
-    暴力破解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
-    伪加密
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
-    流量取证
-  </a>
-  
-    <nav class="md-nav" aria-label="流量取证">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#wireshark" class="md-nav__link">
-    借助wireshark抓取流量
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
-    数据提取
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wifi" class="md-nav__link">
-    wifi流量破解
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usb" class="md-nav__link">
-    USB流量包
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
-    音频隐写
-  </a>
-  
-    <nav class="md-nav" aria-label="音频隐写">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#mp3" class="md-nav__link">
-    MP3隐写
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sstv" class="md-nav__link">
-    SSTV
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#img" class="md-nav__link">
-    img
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ntfs" class="md-nav__link">
-    ntfs数据流
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#qr" class="md-nav__link">
-    QR二维码
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#0" class="md-nav__link">
-    0宽隐写
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pyc" class="md-nav__link">
-    pyc反编译
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#git" class="md-nav__link">
-    git回滚
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1908,198 +1238,14 @@
   
 
 
-  <h1>Misc</h1>
-
-<h3 id="_1">搜索</h3>
+<h1 id="cve">CVE</h1>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
 <ul>
-<li>Google</li>
-<li>Chatgpt</li>
+<li>Common Vulnerabilities &amp; Exposures</li>
+<li>CVE是通用漏洞披露库，通常与漏洞复现的题目相关</li>
 </ul>
-<h3 id="_2">文件类型</h3>
-<ul>
-<li><code>file &lt;文件名&gt;</code> 识别不带后缀的文件格式</li>
-<li>16进制编辑器（winhex、010editer）查看文件头可以得到文件类型</li>
-<li>文件头缺失，用编辑器补全</li>
-</ul>
-<h4 id="sav">.sav</h4>
-<ul>
-<li>游戏存档文件</li>
-</ul>
-<h3 id="_3">文件分离</h3>
-<ul>
-<li><code>binwalk &lt;文件名&gt;</code> 分析文件由其他文件合并</li>
-<li><code>binwalk -e &lt;文件名&gt;</code> 分离文件</li>
-<li><code>foremost &lt;文件名&gt; -o &lt;输出文件名&gt;</code> 分离文件</li>
-<li><code>dd if=&lt;源文件&gt; of=&lt;目标文件&gt; bs=每块字节数&lt;&gt; count=&lt;取多少块&gt; skip=&lt;跳过多少块&gt;</code></li>
-<li>winhex手动分离</li>
-<li><code>strings</code>获取特定字符串</li>
-</ul>
-<h3 id="_4">文件合并</h3>
-<ul>
-<li><code>cat c1 c2 c3 &gt; c</code> 合并文件到c</li>
-<li><code>cat c* &gt; c</code> 同样效果</li>
-<li><code>md5sum &lt;文件名&gt;</code>linux md5完整性检测</li>
-<li><code>copy /B c1+c2+c3 c</code> windows下合并</li>
-</ul>
-<h3 id="_5">图片隐写</h3>
-<h4 id="png">PNG</h4>
-<ul>
-<li>文件开头<code>89 50 4E 47 0D 0A 1A 0A</code></li>
-</ul>
-<h4 id="jpg">JPG</h4>
-<h4 id="gif">GIF</h4>
-<h4 id="_6">细微颜色差别</h4>
-<h4 id="_7">盲水印</h4>
-<ul>
-<li>BlindWaterMark-master</li>
-</ul>
-<h4 id="gif_1">gif多帧隐藏</h4>
-<ul>
-<li>firework</li>
-</ul>
-<h4 id="exif">Exif信息隐藏</h4>
-<ul>
-<li>显示一些图片的定位等信息</li>
-<li>右键-属性</li>
-<li><code>exiftool &lt;图片&gt;</code> 查看exif信息 </li>
-</ul>
-<h4 id="unix">Unix时间戳</h4>
-<ul>
-<li>Unix 时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，不考虑闰秒</li>
-<li>格式<code>1984:08:03 18:41:46</code> <code>+08:00</code> 换算时区</li>
-</ul>
-<h4 id="_8">图片修复</h4>
-<ul>
-<li>stegsolve xor add sub运算</li>
-</ul>
-<h4 id="lsb">最低有效位LSB隐写</h4>
-<ul>
-<li>zteg</li>
-<li>wbstego4</li>
-<li>python脚本</li>
-<li>stegsolve</li>
-</ul>
-<h4 id="_9">图片加密</h4>
-<ul>
-<li>TweakPNG可以打开文件头正常却CRC校验出错的文件</li>
-<li>也可以用python爆破脚本检测CRC正常却长宽错误的文件</li>
-<li>bftools在win下解密图片信息</li>
-<li>silenteye用于隐藏文字和文件到图片</li>
-<li>stegdetect专门用于jpg图像加密，可识别如下隐写算法</li>
-<li>Jphide</li>
-<li>Outguess</li>
-<li>F5</li>
-<li>二维码扫描工具CQR</li>
-</ul>
-<h3 id="_10">压缩文件</h3>
-<h4 id="zip">ZIP</h4>
-<ul>
-<li>文件开头<code>50 4B 03 04</code></li>
-</ul>
-<h5 id="_11">暴力破解</h5>
-<ul>
-<li>Windows下暴力破解ARCHPR，ziperello</li>
-<li>Linux下的命令行工具fcrackzip</li>
-</ul>
-<h5 id="_12">明文攻击</h5>
-<ul>
-<li>Windows下ARCHPR</li>
-<li>Linux下PKCrack</li>
-</ul>
-<h5 id="_13">伪加密</h5>
-<ul>
-<li>zip文件是否加密是通过标识符来显示的，0000代表未加密</li>
-<li>deflag这一位为1代表已经加密，可以利用这一点造成伪加密</li>
-</ul>
-<h4 id="rar">RAR</h4>
-<ul>
-<li>文件开头<code>52 61 72 21 1A 07 00</code></li>
-</ul>
-<h5 id="_14">暴力破解</h5>
-<ul>
-<li>Linux下RarCrack</li>
-</ul>
-<h5 id="_15">伪加密</h5>
-<ul>
-<li>
-<p>PASSWORD_ENCRYPTED这一位为1代表已经加密</p>
-</li>
-<li>
-<p>压缩文件可能解压后缺失，有人恶意写文件头，原本的文件头应当以0x74结尾</p>
-</li>
-<li>NTFS数据流</li>
-</ul>
-<h3 id="_16">流量取证</h3>
-<h4 id="wireshark">借助wireshark抓取流量</h4>
-<ul>
-<li>.pcap文件</li>
-<li>过滤ip <code>ip.src eq xxxx or ip.dst eq xxxx</code></li>
-<li>过滤端口 <code>tcp.port == 80</code></li>
-<li>过滤协议 <code>tcp udp</code></li>
-<li>过滤MAC地址 <code>eth.dst</code></li>
-<li>过滤长度</li>
-<li>http模式过滤</li>
-<li>http和tcp流汇聚</li>
-</ul>
-<h4 id="_17">数据提取</h4>
-<ul>
-<li>导出http对象</li>
-<li>导出分组对象</li>
-</ul>
-<h4 id="wifi">wifi流量破解</h4>
-<ul>
-<li><code>aircrack-ng &lt;xxx.cap&gt; -w dict.txt</code></li>
-<li><code>hashcat -m 22000</code></li>
-</ul>
-<h4 id="usb">USB流量包</h4>
-<ul>
-<li>导出csv</li>
-<li><code>tshark</code></li>
-<li>键盘流量</li>
-<li>鼠标流量</li>
-</ul>
-<h3 id="_18">音频隐写</h3>
-<h4 id="mp3">MP3隐写</h4>
-<ul>
-<li>Mp3Stego</li>
-</ul>
-<h4 id="sstv">SSTV</h4>
-<ul>
-<li>慢扫描电视（Slow-scan television 简称SSTV）是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。</li>
-<li>使用工具：MMSSTV接收图片 e2eSoft虚拟声卡</li>
-<li>文件类型：wav</li>
-</ul>
-<h3 id="img">img</h3>
-<ul>
-<li>回环设备</li>
-<li><code>sudo mount -o loop a.img /img</code> img挂载</li>
-<li><code>sudo umount /img</code> 解除挂载</li>
-</ul>
-<h3 id="ntfs">ntfs数据流</h3>
-<ul>
-<li>window下的文件系统，ntfs隐写</li>
-<li>NtfsStreamsEditor</li>
-<li>AlternateStreamView</li>
-</ul>
-<h3 id="qr">QR二维码</h3>
-<ul>
-<li>QR research</li>
-</ul>
-<h3 id="0">0宽隐写</h3>
-<ul>
-<li><a href="http://330k.github.io/misc_tools/unicode_steganography.html">解码工具</a></li>
-</ul>
-<h3 id="pyc">pyc反编译</h3>
-<ul>
-<li>uncompyle6</li>
-<li><a href="https://tool.lu/pyc/">在线工具</a></li>
-</ul>
-<h3 id="git">git回滚</h3>
-<ul>
-<li><code>git log</code></li>
-<li><code>git reflog</code></li>
-<li><code>git reset --hard xxxxxx</code></li>
-</ul>
+</div>
 
 
 
