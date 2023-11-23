@@ -68,6 +68,7 @@
 #### 思科的Type 7加密形式
 * [在线工具](http://www.atoolbox.net/Tool.php?Id=992)
 
+#### Enigma密码机
 ### 加密算法
 #### 对称加密
 * 加密和解密密钥相同

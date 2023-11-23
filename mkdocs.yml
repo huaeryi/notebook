@@ -7,29 +7,41 @@ site_description: huayi的笔记本
 copyright: Copyright &copy; 2022-2023 <a href="https://github.com/huaeryi" target="_blank" rel="noopener">huayi</a>
 
 nav:
-  - 🏠Home: index.md
+  - 🏠Home: 
+    - index.md
+
   - 📖算法笔记: 
+    - oi/index.md
     - 动态规划:
-      - 动态规划简介: dp/dp.md
-      - 背包dp: dp/dp_pack.md
+      - oi/dp/index.md
+      - 背包dp: oi/dp/dp_pack.md
     - 数据结构:
-      - 并查集: ds/ds_disjoint.md
-      - 树状数组: ds/tree_array.md
-      - 线段树: ds/segment_tree.md
-    - 搜索: search/dfs.md
-    - 小项: other.md
-    - 常用stl库: stl.md
+      - 并查集: oi/ds/ds_disjoint.md
+      - 树状数组: oi/ds/tree_array.md
+      - 线段树: oi/ds/segment_tree.md
+    - 搜索: oi/search/dfs.md
+    - 小项: oi/other.md
+    - 常用stl库: oi/stl.md
+
   - 🚩系统安全: 
+    - ctf/index.md
     - Tools: ctf/tools.md
     - Misc: ctf/misc.md
     - Crypto: ctf/crypto.md
-    - Web: ctf/web.md
+    - Web: 
+      - ctf/web/index.md
+      - PHP相关: ctf/web/php.md
     - Reverse: ctf/reverse.md
     - Pwn: ctf/pwn.md
     - Blockchain: ctf/blockchain.md
     - Android: ctf/android.md
     - OSINT: ctf/osint.md
+    - CVE: 
+      - ctf/cve/index.md
+      - Supervisor: ctf/cve/CVE-2017-11610.md
+
   - 💾CTF赛题收录:
+    - ctf_contest/index.md
     - Hackgame2023: ctf_contest/hackgame2023.md
 
 
