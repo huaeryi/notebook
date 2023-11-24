@@ -3,6 +3,15 @@
   --md-code-font: "JetBrains Mono";
 }
 
+/* Code font size in <details> */
+details .linenos, details code {
+  font-size: inherit !important;
+}
+
+/* Code block / tab in details */
+details > summary + .highlight:last-child, details > summary + .tabbed-set:last-child { margin: 0 -0.6rem !important; }
+details > summary + .highlight:last-child > .highlighttable { margin: 0 !important; }
+
 @media screen and (min-width: 960px) {
   /* body {
     zoom: 1.1;
