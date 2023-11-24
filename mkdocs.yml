@@ -9,6 +9,7 @@ copyright: Copyright &copy; 2022-2023 <a href="https://github.com/huaeryi" targe
 nav:
   - 🏠Home: 
     - index.md
+    - 📝Schedule: home/schedule.md
 
   - 📖算法笔记: 
     - oi/index.md
@@ -19,6 +20,8 @@ nav:
       - 并查集: oi/ds/ds_disjoint.md
       - 树状数组: oi/ds/tree_array.md
       - 线段树: oi/ds/segment_tree.md
+    - 图:
+      - 网络流: oi/flow.md
     - 搜索: oi/search/dfs.md
     - 小项: oi/other.md
     - 常用stl库: oi/stl.md
@@ -26,7 +29,9 @@ nav:
   - 🚩系统安全: 
     - ctf/index.md
     - Tools: ctf/tools.md
-    - Misc: ctf/misc.md
+    - Misc: 
+      - ctf/misc/index.md
+      - 沙箱逃逸: ctf/misc/escape.md
     - Crypto: ctf/crypto.md
     - Web: 
       - ctf/web/index.md
@@ -113,7 +118,6 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true 
 
