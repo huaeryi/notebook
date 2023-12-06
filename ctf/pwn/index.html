@@ -1543,6 +1543,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#relro" class="md-nav__link">
+    RELRO
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#canary" class="md-nav__link">
     Canary
   </a>
@@ -1590,6 +1597,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#got" class="md-nav__link">
+    got表攻击
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    返回地址攻击
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1624,8 +1645,10 @@
 <h3 id="pwn_1">Pwn工具</h3>
 <ul>
 <li>pwntools</li>
+<li>pwndbg</li>
 <li>IDA</li>
 <li>ghidra</li>
+<li>需要注意gdb中的栈空间和直接运行是不一样的，即使关闭了ASLR</li>
 </ul>
 <h3 id="shellcode">Shellcode</h3>
 <ul>
@@ -1681,6 +1704,18 @@
 <ul>
 <li>用<code>checksec</code>检测二进制文件防御手段</li>
 </ul>
+<details class="abstract" open="open">
+<summary>Defense</summary>
+<p>Arch:     i386-32-little
+RELRO:    No RELRO
+Stack:    No canary found
+NX:       NX enabled
+PIE:      No PIE (0x8048000)</p>
+</details>
+<h4 id="relro">RELRO</h4>
+<ul>
+<li>开启说明got表不可修改</li>
+</ul>
 <h4 id="canary">Canary</h4>
 <ul>
 <li>堆栈金丝雀，在函数调用时写入cookie，在返回时检查</li>
@@ -1692,6 +1727,7 @@
 <h4 id="aslr">ASLR</h4>
 <ul>
 <li>地址空间随机化</li>
+<li>即PIE</li>
 </ul>
 <!-- ???+ bug "Format String Bug" -->
 <h3 id="format-string-bug">Format String Bug</h3>
@@ -1710,6 +1746,11 @@
 <li><code>printf(s);  // s = "%x%x%x"</code>会泄露栈上的数据，相对于格式化字符串偏移的数据</li>
 </ul>
 <h4 id="_2">内存修改</h4>
+<ul>
+<li><code>payload = p32(addr) + b'%27d' + b'%4$hhn'</code>形如此类</li>
+</ul>
+<h4 id="got">got表攻击</h4>
+<h4 id="_3">返回地址攻击</h4>
 <h3 id="x86">x86</h3>
 <ul>
 <li>我们总是可以看到，如果按处理器位长寻址，那么地址是+4或者+8，一个地址包含了4字节或8字节的数据（32bit或64bit）</li>
