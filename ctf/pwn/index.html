@@ -1576,6 +1576,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#x86" class="md-nav__link">
+    x86
+  </a>
+  
+    <nav class="md-nav" aria-label="x86">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#x86_1" class="md-nav__link">
+    x86寄存器
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#x86_2" class="md-nav__link">
+    x86函数调用栈
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#format-string-bug" class="md-nav__link">
     Format String Bug
   </a>
@@ -1616,13 +1643,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#x86" class="md-nav__link">
-    x86
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1644,10 +1664,18 @@
 <h1 id="pwn">Pwn</h1>
 <h3 id="pwn_1">Pwn工具</h3>
 <ul>
-<li>pwntools</li>
-<li>pwndbg</li>
-<li>IDA</li>
+<li>
+<p>pwntools</p>
+</li>
+<li>
+<p>IDA</p>
+</li>
 <li>ghidra</li>
+<li>file</li>
+<li>checksec</li>
+<li>gdb</li>
+<li>pwndbg</li>
+<li>peda</li>
 <li>需要注意gdb中的栈空间和直接运行是不一样的，即使关闭了ASLR</li>
 </ul>
 <h3 id="shellcode">Shellcode</h3>
@@ -1682,7 +1710,7 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">context</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">)</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># context.log_level = &#39;debug&#39;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s1">&#39;10.214.160.111&#39;</span><span class="p">,</span> <span class="mi">11003</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="mi">11003</span><span class="p">)</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">shellcode</span> <span class="o">=</span> <span class="n">asm</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s1">        mov edx, 0</span>
@@ -1706,11 +1734,12 @@
 </ul>
 <details class="abstract" open="open">
 <summary>Defense</summary>
-<p>Arch:     i386-32-little
-RELRO:    No RELRO
-Stack:    No canary found
-NX:       NX enabled
-PIE:      No PIE (0x8048000)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Arch:     i386-32-little
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>RELRO:    No RELRO
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Stack:    No canary found
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>NX:       NX enabled
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>PIE:      No PIE (0x8048000)    
+</span></code></pre></div>
 </details>
 <h4 id="relro">RELRO</h4>
 <ul>
@@ -1726,9 +1755,143 @@ PIE:      No PIE (0x8048000)</p>
 </ul>
 <h4 id="aslr">ASLR</h4>
 <ul>
-<li>地址空间随机化</li>
+<li>地址空间随机化ASLR(address space layout randomization)</li>
 <li>即PIE</li>
+<li>0 - 表示关闭进程地址空间随机化</li>
+<li>1 - 表示将mmap的基址，stack和vdso页面随机化</li>
+<li>2 - 表示在1的基础上增加堆（heap）的随机化</li>
 </ul>
+<h3 id="x86">x86</h3>
+<h4 id="x86_1">x86寄存器</h4>
+<details class="abstract">
+<summary>x86 register</summary>
+<p><img alt="" src="register1.png" />
+<img alt="" src="register2.png" /></p>
+</details>
+<h4 id="x86_2">x86函数调用栈</h4>
+<ul>
+<li>我们总是可以看到，如果按处理器位长寻址，那么地址是+4或者+8，一个地址包含了4字节或8字节的数据（32bit或64bit）</li>
+<li>如果按字节寻址，那么地址总是+1，一个地址包含了1字节的数据（8bit），可见无论处理器位长为多少，一个地址所能代表的最小单位都是一字节</li>
+</ul>
+<details class="info" open="open">
+<summary>字节序</summary>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F">wiki百科</a></li>
+<li>对于多字节处理器位长而言，字节序有大端小端之分，字节序指的是多字节编码中以字节为单位排布的顺序，即8bit为一组，字节内部的顺序是不变的</li>
+<li>因此将一个地址上的内容输出和将一个地址上的内容按字节增长顺序输出，小端法得到的结果是不一样的，大端法会得到相同的结果</li>
+<li>数<code>0x12345678</code>的32位补码表示<code>0001 0010 0011 0100 0101 0110 0111 1000</code><ul>
+<li>32bit大端法表示<code>12 34 56 78</code> 补码表示<code>0001 0010 0011 0100 0101 0110 0111 1000</code></li>
+<li>32bit小端法表示<code>78 56 34 12</code> 补码表示<code>0111 1000 0101 0110 0011 0100 0001 0010</code></li>
+</ul>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">地址向右增长(易于理解,与上述解释匹配)</label><label for="__tabbed_2_2">地址向左增长(与寄存器和下述栈结构匹配)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>High
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Address       | 32bit 4Byte     |
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              +-----------------+
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>              | 大端法           |
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>              +-----------------+
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Address    =&gt; | 0x4 0x5 0x6 0x7 |                      
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>0x00000004 =&gt; | 12  34  56  78  |
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>              +-----------------+
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>              | 小端法           |
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>              +-----------------+
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Address    =&gt; | 0x4 0x5 0x6 0x7 |                      
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>0x00000004 =&gt; | 78  56  34  12  |
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>              +-----------------+
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Low           0-------&gt;&gt;-------31
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Address
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>High
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Address       | 32bit 4Byte     |
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>              +-----------------+
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>              | 大端法           |
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>              +-----------------+
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Address    &lt;= | 0x7 0x6 0x5 0x4 |                      
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>0x00000004 =&gt; | 78  56  34  12  |
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>              +-----------------+
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>              | 小端法           |
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>              +-----------------+
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Address    &lt;= | 0x7 0x6 0x5 0x4 |                      
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>0x00000004 =&gt; | 12  34  56  78  |
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>              +-----------------+
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>Low           31-------&lt;&lt;-------0
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>Address
+</span></code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<ul>
+<li>栈是从上到下增长的</li>
+</ul>
+<details class="abstract" open="open">
+<summary>x86的栈结构</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">x86</label><label for="__tabbed_3_2">x86-64</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img alt="" src="x86-32stack.jpg" /></p>
+</div>
+<div class="tabbed-block"></div>
+</div>
+</div>
+</details>
+<!--     
+    === "x86"
+
+        <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>High  Address | 32bit 4Byte     |
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>              +-----------------+
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>              |                 |
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>              +-----------------+
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>              | args #n         |
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>ebp+4*(1+n) =&gt;+-----------------+
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>              | ......          |
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>              +-----------------+
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>              | args #2         |
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>              +-----------------+
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>              | args #1         |
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>      ebp+8 =&gt;+-----------------+
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>              | return address  |
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>      ebp+4 =&gt;+-----------------+
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>              | old ebp address |
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>      ebp   =&gt;+-----------------+
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>              | Callee saved reg|
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>      ebp-4 =&gt;+-----------------+
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>              | ...             |
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      ebp-8 =&gt;+-----------------+
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>              | ...             |
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>              +-----------------+
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>              | return address  |
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>      esp =&gt;  +-----------------+
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>              | next stack frame|
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>              +-----------------+
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>              |                 |
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>Low  Address  31-------&lt;&lt;-------0
+</span></code></pre></div>
+
+    === "x86-64"
+
+        ```
+        High
+        Address | 64bit 8Byte                       |
+                +-----------------------------------+
+                | args                              |
+                +-----------------------------------+
+                | return address                    |
+                +-----------------------------------+
+        rbp =>  | old ebp                           |
+                +-----------------------------------+
+        rbp-8 =>|                                   |
+                +-----------------------------------+
+                | local variables                   |
+        Low     63----------------<<----------------0
+        Address
+        ``` -->
+
 <!-- ???+ bug "Format String Bug" -->
 <h3 id="format-string-bug">Format String Bug</h3>
 <ul>
@@ -1751,108 +1914,6 @@ PIE:      No PIE (0x8048000)</p>
 </ul>
 <h4 id="got">got表攻击</h4>
 <h4 id="_3">返回地址攻击</h4>
-<h3 id="x86">x86</h3>
-<ul>
-<li>我们总是可以看到，如果按处理器位长寻址，那么地址是+4或者+8，一个地址包含了4字节或8字节的数据（32bit或64bit）</li>
-<li>如果按字节寻址，那么地址总是+1，一个地址包含了1字节的数据（8bit），可见无论处理器位长为多少，一个地址所能代表的最小单位都是一字节</li>
-</ul>
-<details class="info" open="open">
-<summary>字节序</summary>
-<ul>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F">wiki百科</a></li>
-<li>对于多字节处理器位长而言，字节序有大端小端之分，字节序指的是多字节编码中以字节为单位排布的顺序，即8bit为一组，字节内部的顺序是不变的</li>
-<li>因此将一个地址上的内容输出和将一个地址上的内容按字节增长顺序输出，小端法得到的结果是不一样的，大端法会得到相同的结果</li>
-<li>数<code>0x12345678</code>的32位补码表示<code>0001 0010 0011 0100 0101 0110 0111 1000</code><ul>
-<li>32bit大端法表示<code>12 34 56 78</code> 补码表示<code>0001 0010 0011 0100 0101 0110 0111 1000</code></li>
-<li>32bit小端法表示<code>78 56 34 12</code> 补码表示<code>0111 1000 0101 0110 0011 0100 0001 0010</code></li>
-</ul>
-</li>
-</ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">地址向右增长(易于理解,与上述解释匹配)</label><label for="__tabbed_2_2">地址向左增长(与寄存器和下述栈结构匹配)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>High
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Address       | 32bit 4Byte     |
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>              +-----------------+
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>              | 大端法           |
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>              +-----------------+
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Address    =&gt; | 0x4 0x5 0x6 0x7 |                      
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>0x00000004 =&gt; | 12  34  56  78  |
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>              +-----------------+
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>              | 小端法           |
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>              +-----------------+
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>Address    =&gt; | 0x4 0x5 0x6 0x7 |                      
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>0x00000004 =&gt; | 78  56  34  12  |
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>              +-----------------+
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>Low           0-------&gt;&gt;-------31
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>Address
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>High
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Address       | 32bit 4Byte     |
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              +-----------------+
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>              | 大端法           |
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>              +-----------------+
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Address    &lt;= | 0x7 0x6 0x5 0x4 |                      
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>0x00000004 =&gt; | 78  56  34  12  |
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>              +-----------------+
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>              | 小端法           |
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>              +-----------------+
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Address    &lt;= | 0x7 0x6 0x5 0x4 |                      
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>0x00000004 =&gt; | 12  34  56  78  |
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>              +-----------------+
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Low           31-------&lt;&lt;-------0
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Address
-</span></code></pre></div>
-</div>
-</div>
-</div>
-</details>
-<ul>
-<li>栈是从上到下增长的</li>
-</ul>
-<details class="abstract" open="open">
-<summary>x86的栈结构</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">x86</label><label for="__tabbed_3_2">x86-64</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>High
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Address | 32bit 4Byte     |
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        +-----------------+
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        | args            |
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        +-----------------+
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        | return address  |
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        +-----------------+
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>ebp =&gt;  | old ebp         |
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        +-----------------+
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>ebp-4 =&gt;| canary value    |
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        +-----------------+
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        | local variables |
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Low     31-------&lt;&lt;-------0
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>Address
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>High
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Address | 64bit 8Byte                       |
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        +-----------------------------------+
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        | args                              |
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>        +-----------------------------------+
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>        | return address                    |
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>        +-----------------------------------+
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>rbp =&gt;  | old ebp                           |
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        +-----------------------------------+
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>rbp-8 =&gt;| canary value                      |
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>        +-----------------------------------+
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>        | local variables                   |
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>Low     63----------------&lt;&lt;----------------0
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Address
-</span></code></pre></div>
-</div>
-</div>
-</div>
-</details>
 
 
 
