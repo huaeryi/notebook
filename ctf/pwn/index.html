@@ -1663,21 +1663,44 @@
 
 <h1 id="pwn">Pwn</h1>
 <h3 id="pwn_1">Pwn工具</h3>
+<details class="abstract" open="open">
+<summary>tools</summary>
 <ul>
-<li>
-<p>pwntools</p>
-</li>
-<li>
-<p>IDA</p>
-</li>
-<li>ghidra</li>
-<li>file</li>
-<li>checksec</li>
-<li>gdb</li>
-<li>pwndbg</li>
-<li>peda</li>
-<li>需要注意gdb中的栈空间和直接运行是不一样的，即使关闭了ASLR</li>
+<li>脚本编写<ul>
+<li>pwntools：写exp和poc的利器</li>
 </ul>
+</li>
+<li>调试工具<ul>
+<li>GDB: Linux调试中必要用到的</li>
+<li>gdb-peda、pwndbg、gef: GDB调试插件</li>
+<li>windbg: windows环境    </li>
+</ul>
+</li>
+<li>程序信息<ul>
+<li>checksec：可以很方便的知道elf程序的安全性和程序的运行平台</li>
+<li>objdump ：可以很快的知道elf程序中的关键信息</li>
+<li>readelf：可以很快的知道elf程序中的关键信息</li>
+<li>file：查看文件类型</li>
+</ul>
+</li>
+<li>反汇编 <ul>
+<li>IDA pro：反汇编工具</li>
+<li>ghidra：反汇编工具，冷门架构</li>
+</ul>
+</li>
+<li>
+<p>libc相关     </p>
+<ul>
+<li>libc-databases：可以通过泄露的libc的某个函数地址查出远程系统是用的哪个libc版本</li>
+<li>ROPgadget：强大的rop利用工具</li>
+<li>one_gadget：可以快速的寻找libc中的调用exec('/bin/sh')的位置</li>
+</ul>
+</li>
+<li>
+<p>需要注意gdb中的栈空间和直接运行是不一样的，即使关闭了ASLR</p>
+</li>
+</ul>
+</details>
 <h3 id="shellcode">Shellcode</h3>
 <ul>
 <li><code>checksec</code>检测程序防御方式</li>
@@ -1828,6 +1851,7 @@
 </details>
 <ul>
 <li>栈是从上到下增长的</li>
+<li>x86的函数参数储存在栈中，而x86-64前6个参数储存在寄存器中，剩下的储存在栈中</li>
 </ul>
 <details class="abstract" open="open">
 <summary>x86的栈结构</summary>

@@ -1334,6 +1334,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ret2_dl_runtime_resolve" class="md-nav__link">
+    ret2_dl_runtime_resolve
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brop" class="md-nav__link">
+    BROP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#srop" class="md-nav__link">
     SROP
   </a>
@@ -1652,6 +1666,20 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ret2_dl_runtime_resolve" class="md-nav__link">
+    ret2_dl_runtime_resolve
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#brop" class="md-nav__link">
+    BROP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#srop" class="md-nav__link">
     SROP
   </a>
@@ -1691,26 +1719,49 @@
 </ul>
 <h3 id="ret2shellcode">ret2shellcode</h3>
 <ul>
-<li>返回到一段恶意注入的shellcode</li>
+<li>返回到一段恶意注入的shellcode<ul>
+<li>可以在栈上</li>
+<li>也可以在bss段,如利用写函数恶意注入</li>
+</ul>
+</li>
 </ul>
 <h3 id="ret2syscall">ret2syscall</h3>
 <ul>
-<li>返回到系统调用</li>
-<li><code>ROPgedget</code></li>
+<li>返回到系统调用<ul>
+<li>系统调用号存入<code>eax</code></li>
+<li>函数参数存入其他寄存器</li>
+<li>用<code>int 80h</code>执行系统调用</li>
+</ul>
+</li>
+<li><code>ROPgadget</code></li>
 </ul>
 <h3 id="ret2libc">ret2libc</h3>
 <ul>
+<li>当程序中没有直接可以利用的函数时，返回到动态链接的libc库函数，通常是system</li>
+<li>返回到plt表，让plt帮你找</li>
+<li>plt表没有，返回到真正的libc里</li>
 <li>linux动态链接 可执行文件-&gt;PLT表-&gt;GOT表-&gt;libc</li>
 <li>PLT程序链接表</li>
 <li>GOT全局偏移表</li>
-<li>建表是很麻烦的，延迟绑定 plt-&gt;got-&gt;plt-&gt;公共plt-&gt;_dl_runtime_resolve</li>
+<li>程序运行开始就建表是很麻烦的，延迟绑定机制plt-&gt;got-&gt;plt-&gt;公共plt-&gt;_dl_runtime_resolve</li>
 <li>第一次调用时写入，然后再次调用</li>
 <li>后续调用直接用</li>
 <li>libcsearcher</li>
+<li>libcdatabase</li>
 </ul>
 <h3 id="ret2csu">ret2csu</h3>
 <ul>
-<li>x64的传参前六个参数在寄存器上</li>
+<li>x64的传参前六个参数在寄存器RDI, RSI, RDX, RCX, R8, R9 </li>
+</ul>
+<h3 id="ret2_dl_runtime_resolve">ret2_dl_runtime_resolve</h3>
+<ul>
+<li>延迟绑定时所用函数</li>
+</ul>
+<h3 id="brop">BROP</h3>
+<ul>
+<li>在题目不给出二进制文件的情况下盲打</li>
+<li>通过脚本遍历出二进制文件内容</li>
+<li>进行其他ROP</li>
 </ul>
 <h3 id="srop">SROP</h3>
 
