@@ -16,7 +16,7 @@
         <link rel="prev" href="../web/ssrf/">
       
       
-        <link rel="next" href="../pwn/">
+        <link rel="next" href="unpack/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1146,6 +1146,8 @@
           
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -1169,6 +1171,10 @@
 
             </a>
             
+              <label class="md-nav__link md-nav__link--active" for="__nav_3_6">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
           </div>
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
@@ -1178,6 +1184,26 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="unpack/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    壳
+  </span>
+  
+
+      </a>
+    </li>
+  
+
               
             
           </ul>
@@ -1529,54 +1555,27 @@
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    壳
-  </a>
-  
-    <nav class="md-nav" aria-label="壳">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    压缩壳
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    加密壳
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
     代码混淆
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     花指令
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     迷宫问题
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     编译原理
   </a>
   
@@ -1623,6 +1622,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#os" class="md-nav__link">
+    OS
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1654,16 +1660,10 @@
 <li>Ollydbg</li>
 <li>Exeinfo PE</li>
 </ul>
-<h3 id="_2">壳</h3>
-<h4 id="_3">压缩壳</h4>
-<ul>
-<li>UPX脱壳</li>
-</ul>
-<h4 id="_4">加密壳</h4>
-<h3 id="_5">代码混淆</h3>
-<h3 id="_6">花指令</h3>
-<h3 id="_7">迷宫问题</h3>
-<h3 id="_8">编译原理</h3>
+<h3 id="_2">代码混淆</h3>
+<h3 id="_3">花指令</h3>
+<h3 id="_4">迷宫问题</h3>
+<h3 id="_5">编译原理</h3>
 <h4 id="preprocessing">预处理(Preprocessing)</h4>
 <ul>
 <li><code>gcc -E hello.c -o hello.i</code></li>
@@ -1691,6 +1691,12 @@
 <ul>
 <li><a href="https://huaeryi.github.io/2023/04/24/x86/">参考资料</a></li>
 <li>施工中...</li>
+</ul>
+<h3 id="os">OS</h3>
+<ul>
+<li>Windows-&gt;PE</li>
+<li>Linux-&gt;elf</li>
+<li>DOS-&gt;16bit</li>
 </ul>
 
 
@@ -1738,13 +1744,13 @@
         
         
           
-          <a href="../pwn/" class="md-footer__link md-footer__link--next" aria-label="下一页: Pwn" rel="next">
+          <a href="unpack/" class="md-footer__link md-footer__link--next" aria-label="下一页: 壳" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                Pwn
+                壳
               </div>
             </div>
             <div class="md-footer__button md-icon">
