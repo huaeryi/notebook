@@ -922,6 +922,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -971,6 +973,26 @@
   
   <span class="md-ellipsis">
     沙箱逃逸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/qrcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QRCode
   </span>
   
 
@@ -1121,6 +1143,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SSRF
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1130,6 +1163,39 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url中伪协议的类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-rebinding" class="md-nav__link">
+    DNS rebinding
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1206,7 +1272,7 @@
         
   
   <span class="md-ellipsis">
-    壳
+    软件壳
   </span>
   
 
@@ -1550,6 +1616,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    url中伪协议的类型
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-rebinding" class="md-nav__link">
+    DNS rebinding
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1567,17 +1655,25 @@
 
 
 <h1 id="ssrf">SSRF服务端请求伪造</h1>
+<details class="abstract" open="open">
+<summary>requests</summary>
 <ul>
 <li>SSRF，Server-Side Request Forgery，服务端请求伪造</li>
-<li>
-<p>当服务器请求一个传入的url但未过滤时，传入的恶意url将会对内网进行攻击</p>
-</li>
-<li>
-<p>DNS rebinding</p>
-<ul>
-<li>通过低ttl的域名绑定混淆目标，达到绕过的效果</li>
+<li>当服务器请求一个传入的url但未过滤时，传入的恶意url将会对内网进行攻击</li>
 </ul>
-</li>
+</details>
+<h3 id="url">url中伪协议的类型</h3>
+<ul>
+<li>file:///</li>
+<li>dict://</li>
+<li>sftp://</li>
+<li>ldap://</li>
+<li>tftp://</li>
+<li>gopher://</li>
+</ul>
+<h3 id="dns-rebinding">DNS rebinding</h3>
+<ul>
+<li>通过低ttl的域名重绑定混淆目标，达到绕过的效果</li>
 </ul>
 
 

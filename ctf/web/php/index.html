@@ -922,6 +922,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -971,6 +973,26 @@
   
   <span class="md-ellipsis">
     沙箱逃逸
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../misc/qrcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    QRCode
   </span>
   
 
@@ -1191,6 +1213,13 @@
       
         <li class="md-nav__item">
   <a href="#php_2" class="md-nav__link">
+    PHP文件上传
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php_3" class="md-nav__link">
     PHP文件包含
   </a>
   
@@ -1198,7 +1227,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#php_3" class="md-nav__link">
+  <a href="#php_4" class="md-nav__link">
     php伪协议
   </a>
   
@@ -1342,7 +1371,7 @@
         
   
   <span class="md-ellipsis">
-    壳
+    软件壳
   </span>
   
 
@@ -1768,6 +1797,13 @@
       
         <li class="md-nav__item">
   <a href="#php_2" class="md-nav__link">
+    PHP文件上传
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php_3" class="md-nav__link">
     PHP文件包含
   </a>
   
@@ -1775,7 +1811,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#php_3" class="md-nav__link">
+  <a href="#php_4" class="md-nav__link">
     php伪协议
   </a>
   
@@ -1836,9 +1872,11 @@
 <h4 id="_2">命令注入</h4>
 <ul>
 <li>执行系统命令时注入恶意拼接的代码，一般来说web服务器的用户执行权限是www-data</li>
-<li>r = 4; w = 2; x = 1;</li>
+<li>r = 4; w = 2; x = 1;<ul>
 <li>-rwxr--r--等价于一个文件权限是744</li>
 <li>drwxr--r--等价于一个目录权限是744</li>
+</ul>
+</li>
 </ul>
 <h4 id="shell">常用shell命令</h4>
 <ul>
@@ -1852,12 +1890,14 @@
 <ul>
 <li>过滤空格的绕过</li>
 <li><code>$IFS</code> <code>${IFS}</code> <code>$IFS$9</code> <code>&lt;</code> <code>&lt;&gt;</code> <code>{cat,flag.php}</code> <code>%20</code> <code>%09</code></li>
-<li>过滤关键字的绕过</li>
+<li>过滤关键字的绕过<ul>
 <li>反斜线<code>\</code>绕过</li>
 <li>两个单引号<code>''</code>绕过</li>
 <li>base64 hex绕过</li>
 <li>通配符匹配 </li>
 <li>变量绕过</li>
+</ul>
+</li>
 <li>双写绕过（添加自身）</li>
 </ul>
 <h4 id="_3">代码执行</h4>
@@ -1882,16 +1922,34 @@
 <li>序列化serialize()将变量转化为字符串</li>
 <li>反序列化unserialize()</li>
 </ul>
-<h3 id="php_2">PHP文件包含</h3>
+<h3 id="php_2">PHP文件上传</h3>
 <ul>
-<li>本地文件包含 相对于服务器的本地文件</li>
-<li>远程文件包含 相对于服务器的远程文件</li>
+<li>经常和文件包含结合</li>
 </ul>
-<h4 id="php_3">php伪协议</h4>
+<h3 id="php_3">PHP文件包含</h3>
 <ul>
-<li><code>file://</code></li>
+<li><a href="https://cdn.zjusec.com/PHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E%E6%80%BB%E7%BB%93.html">文件包含漏洞</a></li>
+<li>本地文件包含 相对于被攻击服务器的本地文件</li>
+<li>远程文件包含 相对于被攻击服务器的远程文件</li>
+</ul>
+<h4 id="php_4">php伪协议</h4>
+<ul>
+<li>
+<p><code>file://</code></p>
+</li>
+<li>
+<p><code>php://input</code>用于把input内容当作php代码执行</p>
+<ul>
+<li>在协议头输入： ?/file=php://input</li>
+<li><code>?/file=php://input%00</code>可以用作截断</li>
+<li>在请求体输入：&lt;?PHP system("ls /"); ?&gt;`</li>
+</ul>
+</li>
 </ul>
 <h4 id="00">00截断</h4>
+<ul>
+<li>payload后加上<code>%00</code></li>
+</ul>
 <h4 id="_4">长度截断</h4>
 
 
