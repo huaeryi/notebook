@@ -1855,6 +1855,54 @@
     逆向常见算法
   </a>
   
+    <nav class="md-nav" aria-label="逆向常见算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#base64" class="md-nav__link">
+    Base64
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#teaxteaxxtea" class="md-nav__link">
+    Tea/XTea/XXTea
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md5" class="md-nav__link">
+    MD5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rc4rc5rc6" class="md-nav__link">
+    RC4/RC5/RC6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aesdesidea" class="md-nav__link">
+    AES/DES/IDEA
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sha256sha1" class="md-nav__link">
+    SHA256/SHA1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1867,6 +1915,20 @@
         <li class="md-nav__item">
   <a href="#idapython" class="md-nav__link">
     IDAPython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smc" class="md-nav__link">
+    SMC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ollvm" class="md-nav__link">
+    ollvm
   </a>
   
 </li>
@@ -1959,18 +2021,42 @@
 </ul>
 <h3 id="_2">代码混淆</h3>
 <h4 id="_3">花指令</h4>
+<ul>
+<li>od修改nop</li>
+<li>ida脚本
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import idc
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>for i in range(0x400BB7, 0x400BBC + 1):
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    idc.patch_byte(i, 0x90)
+</span></code></pre></div></li>
+</ul>
 <h4 id="_4">反调试</h4>
 <h3 id="_5">逆向常见算法</h3>
+<h4 id="base64">Base64</h4>
 <ul>
-<li>Tea/XTea/XXTea
-magic number ：0x9e3779b9</li>
-<li>RC4/RC5/RC6</li>
-<li>AES/DES/IDEA</li>
-<li>Base64</li>
-<li>MD5/SHA256/SHA1</li>
+<li>特征索引表<code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code></li>
+</ul>
+<h4 id="teaxteaxxtea">Tea/XTea/XXTea</h4>
+<ul>
+<li>特征magic number ：<code>0x9e3779b9</code></li>
+</ul>
+<h4 id="md5">MD5</h4>
+<ul>
+<li>MD5<code>0x67452301，0xEFCDAB89，0x98BADCFE，0x10325476</code></li>
+</ul>
+<h4 id="rc4rc5rc6">RC4/RC5/RC6</h4>
+<h4 id="aesdesidea">AES/DES/IDEA</h4>
+<h4 id="sha256sha1">SHA256/SHA1</h4>
+<ul>
+<li>SHA1<code>0x67452301，0xEFCDAB89，0x98BADCFE，0x10325476，0xC3D2E1F0</code></li>
 </ul>
 <h3 id="angr">angr</h3>
 <h3 id="idapython">IDAPython</h3>
+<h3 id="smc">SMC</h3>
+<ul>
+<li>自修改代码<code>Self Modifying Code，动态代码加密技术</code></li>
+</ul>
+<h3 id="ollvm">ollvm</h3>
 <h3 id="_6">编译原理</h3>
 <h4 id="preprocessing">预处理(Preprocessing)</h4>
 <ul>
