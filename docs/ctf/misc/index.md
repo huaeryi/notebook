@@ -27,6 +27,8 @@
 * `copy /B c1+c2+c3 c` windows下合并
 
 ### 图片隐写
+#### 一把梭
+* [checklist](https://stegonline.georgeom.net/checklist)
 #### PNG
 * 文件开头`89 50 4E 47 0D 0A 1A 0A`
 
@@ -69,6 +71,7 @@
   * Jphide
   * Outguess
   * F5
+* steghide要求输入一个key后获取图片隐写的内容
 * 二维码扫描工具CQR
 
 
@@ -132,14 +135,14 @@
 * 回环设备
 * `sudo mount -o loop a.img /img` img挂载
 * `sudo umount /img` 解除挂载
+* 7z解压缩
 
 ### ntfs数据流
-* window下的文件系统，ntfs隐写
+- window下的文件系统，ntfs隐写
   * NtfsStreamsEditor
   * AlternateStreamView
 
-### QR二维码
-* QR research
+
 
 ### 0宽隐写
 * [解码工具](http://330k.github.io/misc_tools/unicode_steganography.html)
@@ -152,4 +155,5 @@
 * `git log`
 * `git reflog`
 * `git reset --hard xxxxxx`
+
 

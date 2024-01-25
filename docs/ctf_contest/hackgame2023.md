@@ -71,18 +71,23 @@ Q4 🥒🥒🥒：「我……从没觉得写类型标注有意思过」。在�
 ### 组委会模拟器 ![](https://img.shields.io/badge/-Web-blueviolet?style=flat-square)
 * 可以进化成为高频率星人后再申请组委会
 * 如果进化失败，可以使用人类的javascript脚本
-```js
-setInterval(function() {
-  var x = document.getElementsByClassName("fakeqq-message__bubble");
-  for (var i = 0; i < x.length; i++) {
-    var content = x[i].textContent;
-    if (content.search(/hack\[/) != -1) {
-      console.log(content);
-      x[i].click();    
-    }
-  }
-}, 1500);
-```
+  
+???+ abstract "脚本"
+
+    === "Javascript"
+
+        ```js linenums="1"
+        setInterval(function() {
+          var x = document.getElementsByClassName("fakeqq-message__bubble");
+          for (var i = 0; i < x.length; i++) {
+            var content = x[i].textContent;
+            if (content.search(/hack\[/) != -1) {
+              console.log(content);
+              x[i].click();    
+            }
+          }
+        }, 1500);
+        ```
 
 ### 虫 ![](https://img.shields.io/badge/-Misc-informational?style=flat-square)
 * SSTV:慢扫描电视（Slow-scan television）是业余无线电爱好者的一种主要图片传输方法，慢扫描电视通过无线电传输和接收单色或彩色静态图片。

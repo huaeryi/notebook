@@ -4,7 +4,7 @@ repo_name: huaeryi/notebook
 repo_url: https://github.com/huaeryi/notebook
 edit_uri: tree/master/docs
 site_description: huayi的笔记本
-copyright: Copyright &copy; 2022-2023 <a href="https://github.com/huaeryi" target="_blank" rel="noopener">huayi</a>
+copyright: Copyright &copy; 2022-2024 <a href="https://github.com/huaeryi" target="_blank" rel="noopener">huayi</a>
 
 nav:
   - 🏠Home: 
@@ -32,14 +32,36 @@ nav:
     - Misc: 
       - ctf/misc/index.md
       - 沙箱逃逸: ctf/misc/escape.md
-    - Crypto: ctf/crypto.md
+      - QRCode: ctf/misc/qrcode.md
+    - Crypto:
+      - ctf/crypto/index.md
+      - AES: ctf/crypto/aes.md
+      - RSA: ctf/crypto/rsa.md
+      - LWE: ctf/crypto/lwe.md
+      - ECC: ctf/crypto/ecc.md
+
     - Web: 
       - ctf/web/index.md
       - PHP相关: ctf/web/php.md
-    - Reverse: ctf/reverse.md
-    - Pwn: ctf/pwn.md
+      - SQL注入: ctf/web/sql.md
+      - SSRF: ctf/web/ssrf.md
+      - XSS: ctf/web/xss.md
+    - Reverse: 
+      - ctf/reverse/index.md
+      - 软件壳: ctf/reverse/unpack.md
+      - 迷宫问题: ctf/reverse/maze.md
+      - Golang逆向: ctf/reverse/go.md
+      - Android逆向: ctf/reverse/android.md
+    - Pwn: 
+      - ctf/pwn/index.md
+      - fsb: ctf/pwn/fsb.md
+      - ROP: ctf/pwn/rop.md
+      - Heap: ctf/pwn/heap.md
+
+    - AI: 
+      - ctf/ai/index.md
     - Blockchain: ctf/blockchain.md
-    - Android: ctf/android.md
+
     - OSINT: ctf/osint.md
     - CVE: 
       - ctf/cve/index.md
@@ -127,8 +149,10 @@ markdown_extensions:
   - def_list
   - pymdownx.tasklist:
       custom_checkbox: true
-
+      
   - tables
+  - attr_list
+  - md_in_html
 
 
 

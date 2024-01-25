@@ -1,7 +1,14 @@
-### 在线网站
+# Crypto
+
+### 密码学工具
 * [cyberchef](https://icyberchef.com/)
 * [在线工具包](http://www.hiencode.com/)
 * [md5解密](https://www.cmd5.com/)
+* [质因数分解factordb](http://www.factordb.com/)
+* 质因数分解yafu
+* [词频分析quipqiup](https://quipqiup.com/)
+* gmpy2
+* sage
 
 ### 常见编码
 #### ASCII
@@ -63,12 +70,16 @@
 ### 古典密码
 #### Caesar凯撒密码
 * 也称ROT
+#### 维吉尼亚密码
+
+
 #### Rail Fence Cipher栅栏密码
 
 #### 思科的Type 7加密形式
 * [在线工具](http://www.atoolbox.net/Tool.php?Id=992)
 
 #### Enigma密码机
+
 ### 加密算法
 #### 对称加密
 * 加密和解密密钥相同
@@ -77,18 +88,8 @@
 #### 非对称加密
 * 加密和解密密钥不同，即公钥和私钥
 * RSA、ECC、EIGamal
-##### RSA
-* 一对不相等且足够大的质数`p q`
-* 计算p，q的乘积`n = p * q`
-* 计算n的欧拉函数`phi(n) = (p - 1)*(q - 1)`
-* 选一个和phi(n)互质的整数e`1 < e < phi(n)`
-* 计算出e对于phi(n)的模反元素d `de mod phi(n) = 1`
-* 公钥 `KU = (e, n)`
-* 私钥 `KR = (d, n)`
-* 明文M 加密`M^e mod n = C`
-* 密文C 解密`C^d mod n = M`
-###### 低加密指数攻击
-* d = 2, d = 3 可以直接尝试开方
+
+
 
 ### 摘要算法（哈希算法）
 * 验证数据完整性

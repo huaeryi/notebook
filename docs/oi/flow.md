@@ -2,7 +2,7 @@
 - [网络流24题](https://www.luogu.com.cn/problem/list?tag=332)
 
 
-???+ Abstract "网络流" 
+<!-- ???+ Abstract "网络流" 
 
     ```cpp linenums="1"  hl_lines="2 3" 
     int main() {
@@ -15,7 +15,7 @@
       printf("%d\n", dinic(s, t));
       return 0;
     }
-    ```
+    ``` -->
 
 
 ### 最大流
