@@ -1464,6 +1464,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1508,11 +1512,51 @@
   
   
     <li class="md-nav__item">
+      <a href="../pwn/fsb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fsb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../pwn/rop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     ROP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pwn/heap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heap
   </span>
   
 
@@ -1824,6 +1868,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#angr" class="md-nav__link">
+    angr
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#idapython" class="md-nav__link">
+    IDAPython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crackme-keygenme" class="md-nav__link">
+    crackme &amp; keygenme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     代码混淆
   </a>
@@ -1834,6 +1899,20 @@
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     花指令
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smc" class="md-nav__link">
+    SMC
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ollvm" class="md-nav__link">
+    ollvm
   </a>
   
 </li>
@@ -1902,34 +1981,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#angr" class="md-nav__link">
-    angr
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#idapython" class="md-nav__link">
-    IDAPython
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#smc" class="md-nav__link">
-    SMC
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ollvm" class="md-nav__link">
-    ollvm
-  </a>
   
 </li>
       
@@ -2018,23 +2069,40 @@
 <li>ILSpy</li>
 <li>Ollydbg</li>
 <li>Exeinfo PE</li>
+<li>tip:为某些windows工具设置环境变量Path<code>C:\Users\91758\Desktop\tools\upx-4.2.1-win64\upx-4.2.1-win64</code></li>
+</ul>
+<h3 id="angr">angr</h3>
+<h3 id="idapython">IDAPython</h3>
+<h3 id="crackme-keygenme">crackme &amp; keygenme</h3>
+<ul>
+<li>练习程序</li>
+<li>注册码生成程序</li>
 </ul>
 <h3 id="_2">代码混淆</h3>
 <h4 id="_3">花指令</h4>
 <ul>
 <li>od修改nop</li>
-<li>ida脚本
+<li>IDAPython脚本
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import idc
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>for i in range(0x400BB7, 0x400BBC + 1):
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    idc.patch_byte(i, 0x90)
 </span></code></pre></div></li>
 </ul>
+<h4 id="smc">SMC</h4>
+<ul>
+<li>自修改代码<code>Self Modifying Code，动态代码加密技术</code><ul>
+<li>利用IDAPython脚本还原被修改的代码，得到运行时函数</li>
+</ul>
+</li>
+</ul>
+<h4 id="ollvm">ollvm</h4>
 <h4 id="_4">反调试</h4>
 <h3 id="_5">逆向常见算法</h3>
 <h4 id="base64">Base64</h4>
 <ul>
 <li>特征索引表<code>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/</code></li>
+<li>变式：改变特征索引表</li>
 </ul>
 <h4 id="teaxteaxxtea">Tea/XTea/XXTea</h4>
 <ul>
@@ -2050,13 +2118,6 @@
 <ul>
 <li>SHA1<code>0x67452301，0xEFCDAB89，0x98BADCFE，0x10325476，0xC3D2E1F0</code></li>
 </ul>
-<h3 id="angr">angr</h3>
-<h3 id="idapython">IDAPython</h3>
-<h3 id="smc">SMC</h3>
-<ul>
-<li>自修改代码<code>Self Modifying Code，动态代码加密技术</code></li>
-</ul>
-<h3 id="ollvm">ollvm</h3>
 <h3 id="_6">编译原理</h3>
 <h4 id="preprocessing">预处理(Preprocessing)</h4>
 <ul>

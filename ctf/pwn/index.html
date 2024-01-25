@@ -16,7 +16,7 @@
         <link rel="prev" href="../reverse/android/">
       
       
-        <link rel="next" href="rop/">
+        <link rel="next" href="fsb/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1464,6 +1464,10 @@
       
         
       
+        
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
@@ -1508,11 +1512,51 @@
   
   
     <li class="md-nav__item">
+      <a href="fsb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    fsb
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="rop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     ROP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="heap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Heap
   </span>
   
 
@@ -1898,47 +1942,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#format-string-bug" class="md-nav__link">
-    Format String Bug
-  </a>
-  
-    <nav class="md-nav" aria-label="Format String Bug">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    内存泄露
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    内存修改
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#got" class="md-nav__link">
-    got表攻击
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    返回地址攻击
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2212,29 +2215,6 @@
         Address
         ``` -->
 
-<!-- ???+ bug "Format String Bug" -->
-<h3 id="format-string-bug">Format String Bug</h3>
-<ul>
-<li>全称格式化字符串漏洞</li>
-</ul>
-<h4 id="_1">内存泄露</h4>
-<ul>
-<li>以<code>printf()</code>为例</li>
-<li><code>%d</code> - 十进制 - 输出十进制整数</li>
-<li><code>%s</code> - 字符串 - 从内存中读取字符串</li>
-<li><code>%x</code> - 十六进制 - 输出十六进制数</li>
-<li><code>%c</code> - 字符 - 输出字符</li>
-<li><code>%p</code> - 指针 - 指针地址</li>
-<li><code>%n</code> - 到目前为止所写的字符数</li>
-<li><code>printf(s);  // s = "%x%x%x"</code>会泄露栈上的数据，相对于格式化字符串偏移的数据</li>
-</ul>
-<h4 id="_2">内存修改</h4>
-<ul>
-<li><code>payload = p32(addr) + b'%27d' + b'%4$hhn'</code>形如此类</li>
-</ul>
-<h4 id="got">got表攻击</h4>
-<h4 id="_3">返回地址攻击</h4>
-
 
 
 
@@ -2280,13 +2260,13 @@
         
         
           
-          <a href="rop/" class="md-footer__link md-footer__link--next" aria-label="下一页: ROP" rel="next">
+          <a href="fsb/" class="md-footer__link md-footer__link--next" aria-label="下一页: fsb" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 下一页
               </span>
               <div class="md-ellipsis">
-                ROP
+                fsb
               </div>
             </div>
             <div class="md-footer__button md-icon">

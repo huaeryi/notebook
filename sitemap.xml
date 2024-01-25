@@ -91,6 +91,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://note.huaeryi.com/ctf/pwn/fsb/</loc>
+         <lastmod>2024-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://note.huaeryi.com/ctf/pwn/heap/</loc>
+         <lastmod>2024-01-25</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://note.huaeryi.com/ctf/pwn/rop/</loc>
          <lastmod>2024-01-25</lastmod>
          <changefreq>daily</changefreq>
