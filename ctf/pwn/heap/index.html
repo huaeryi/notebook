@@ -1598,6 +1598,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#use-after-freeuaf" class="md-nav__link">
+    Use After Free(UAF)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlink" class="md-nav__link">
+    unlink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ptmalloc2-glibc" class="md-nav__link">
+    ptmalloc2内存管理 -&gt;Glibc使用的机制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#off-by-one" class="md-nav__link">
     off-by-one
   </a>
@@ -1908,6 +1936,34 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#use-after-freeuaf" class="md-nav__link">
+    Use After Free(UAF)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unlink" class="md-nav__link">
+    unlink
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ptmalloc2-glibc" class="md-nav__link">
+    ptmalloc2内存管理 -&gt;Glibc使用的机制
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    函数
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#off-by-one" class="md-nav__link">
     off-by-one
   </a>
@@ -1934,7 +1990,44 @@
 
 <h1 id="heap">Heap</h1>
 <ul>
-<li>堆漏洞利用</li>
+<li>
+<p>堆漏洞利用</p>
+</li>
+<li>
+<p>chunk堆分配的数据结构</p>
+</li>
+<li>堆向上生长</li>
+<li>Glibc版本</li>
+</ul>
+<h3 id="use-after-freeuaf">Use After Free(UAF)</h3>
+<ul>
+<li>glibc-2.23</li>
+<li>你可以使用释放后的堆</li>
+<li>画内存图</li>
+</ul>
+<h3 id="unlink">unlink</h3>
+<ul>
+<li>脱链</li>
+</ul>
+<h3 id="ptmalloc2-glibc">ptmalloc2内存管理 -&gt;Glibc使用的机制</h3>
+<ul>
+<li>bin存放未分配或已释放chunk的机制<ul>
+<li>fast bin   单向链表</li>
+<li>unsorted bin</li>
+<li>large bin  循环双向链表</li>
+<li>small bin  双向链表</li>
+<li>tcache bin</li>
+</ul>
+</li>
+</ul>
+<h3 id="_1">函数</h3>
+<ul>
+<li><code>malloc</code><ul>
+<li>从小到达申请满足要求的堆块</li>
+</ul>
+</li>
+<li><code>free</code></li>
+<li>这些函数背后的系统调用主要是 (s)brk 函数以及 mmap, munmap 函数。</li>
 </ul>
 <h3 id="off-by-one">off-by-one</h3>
 
