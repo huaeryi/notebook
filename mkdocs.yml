@@ -70,6 +70,7 @@ nav:
   - 💾CTF赛题收录:
     - ctf_contest/index.md
     - Hackgame2023: ctf_contest/hackgame2023.md
+    - BeginCTF2024: ctf_contest/beginctf.md
 
 
 theme: 

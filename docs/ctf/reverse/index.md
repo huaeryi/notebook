@@ -77,3 +77,5 @@ for i in range(0x400BB7, 0x400BBC + 1):
 * Windows->PE
 * Linux->elf
 * DOS->16bit
+
+### VM虚拟机逆向
