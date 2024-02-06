@@ -1337,6 +1337,40 @@
     PHP反序列化
   </a>
   
+    <nav class="md-nav" aria-label="PHP反序列化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    序列化对象特征
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    魔术方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phar" class="md-nav__link">
+    phar反序列化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    session反序列化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1369,7 +1403,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     长度截断
   </a>
   
@@ -1922,6 +1956,8 @@
       
         
       
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -1971,6 +2007,26 @@
   
   <span class="md-ellipsis">
     Hackgame2023
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ctf_contest/beginctf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BeginCTF2024
   </span>
   
 
@@ -2085,6 +2141,40 @@
     PHP反序列化
   </a>
   
+    <nav class="md-nav" aria-label="PHP反序列化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    序列化对象特征
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    魔术方法
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phar" class="md-nav__link">
+    phar反序列化
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session" class="md-nav__link">
+    session反序列化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2117,7 +2207,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     长度截断
   </a>
   
@@ -2215,6 +2305,28 @@
 <li>反序列化unserialize()</li>
 <li>POP 面向属性编程(Property-Oriented Programing) </li>
 </ul>
+<h4 id="_4">序列化对象特征</h4>
+<ul>
+<li><code>O:6:"class1":3:{s:1:"a";s:1:"1";s:4:"b";s:5:"ThisB";s:9:"class1c";s:5:"ThisC";}</code></li>
+<li><code>O:对象名的长度:"对象名":对象属性个数:{s:属性名的长度:"属性名";s:属性值的长度:"属性值";}</code></li>
+<li>a是public类型的变量，s表示字符串，1表示变量名的长度，a是变量名。</li>
+<li>b是protected类型的变量，它的变量名长度为4，也就是b前添加了%00%00。所以，protected属性的表示方式是在变量名前加上%00*%00。</li>
+<li>c是private类型的变量，c的变量名前添加了%00类名%00。所以，private属性的表示方式是在变量名前加上%00类名%00</li>
+<li>虽然Test类中有test1方法，但是，序列化得到的字符串中，只保存了公有变量a，保护变量b和私有变量c，并没保存类中的方法。也可以看出，序列化不保存方法。</li>
+</ul>
+<h4 id="_5">魔术方法</h4>
+<ul>
+<li><code>__construct()</code>:具有构造函数的类会在每次创建新对象时先调用此方法。</li>
+<li><code>__destruct()</code>:析构函数会在到某个对象的所有引用都被删除或者当对象被显式销毁时执行。</li>
+<li><code>__toString()</code>方法用于一个类被当成字符串时应怎样回应。例如echo $obj;应该显示些什么。 此方法必须返回一个字符串，否则将发出一条 E_RECOVERABLE_ERROR 级别的致命错误。</li>
+<li><code>__sleep()</code>方法在一个对象被序列化之前调用；</li>
+<li><code>__wakeup()</code>:unserialize( )会检查是否存在一个_wakeup( )方法。如果存在，则会先调用_wakeup方法，预先准备对象需要的资源。</li>
+<li><code>get()</code> <code>set()</code> 当调用或设置一个类及其父类方法中未定义的属性时</li>
+<li><code>__invoke()</code> 调用函数的方式调用一个对象时的回应方法</li>
+<li><code>call</code> 和 <code>callStatic</code>前者是调用类不存在的方法时执行，而后者是调用类不存在的静态方式方法时执行。</li>
+</ul>
+<h4 id="phar">phar反序列化</h4>
+<h4 id="session">session反序列化</h4>
 <h3 id="php_2">PHP文件上传</h3>
 <ul>
 <li>经常和文件包含结合</li>
@@ -2243,7 +2355,7 @@
 <ul>
 <li>payload后加上<code>%00</code></li>
 </ul>
-<h4 id="_4">长度截断</h4>
+<h4 id="_6">长度截断</h4>
 
 
 
