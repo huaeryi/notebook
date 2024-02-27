@@ -1932,6 +1932,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#pie" class="md-nav__link">
+    PIE
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2100,10 +2107,16 @@
 <h4 id="aslr">ASLR</h4>
 <ul>
 <li>地址空间随机化ASLR(address space layout randomization)</li>
-<li>即PIE</li>
+<li>系统功能 </li>
+<li>作用于栈基地址（stack）、共享库（.so\libraries）、mmap 基地址、堆基地址（chunk）</li>
 <li>0 - 表示关闭进程地址空间随机化</li>
 <li>1 - 表示将mmap的基址，stack和vdso页面随机化</li>
 <li>2 - 表示在1的基础上增加堆（heap）的随机化</li>
+</ul>
+<h4 id="pie">PIE</h4>
+<ul>
+<li>与ASLR不同，是编译选项</li>
+<li>作用于代码段（ .text ）、初始化数据段（ .data ）、未初始化数据段（ .bss ）</li>
 </ul>
 <h3 id="x86">x86</h3>
 <h4 id="x86_1">x86寄存器</h4>
