@@ -10,28 +10,26 @@
       
       
       
-        <link rel="canonical" href="https://note.huaeryi.com/oi/ds/ds_disjoint/">
+        <link rel="canonical" href="https://note.huaeryi.com/ctf_wp/midnightsunctf2024/">
       
       
-        <link rel="prev" href="../../dp/dp_pack/">
+        <link rel="prev" href="../plaidctf2024/">
       
       
-        <link rel="next" href="../tree_array/">
       
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
     
     
       
-        <title>并查集 - Huayi's Notebook</title>
+        <title>MidnightSunCTF2024 - Huayi's Notebook</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.046329b4.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.046329b4.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.85d0ee34.min.css">
       
       
   
@@ -85,13 +83,13 @@
       
     
     
-      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
     
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jetbrains-mono@1.0.6/css/jetbrains-mono.min.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -115,6 +113,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#midnight-sun-ctf" class="md-skip">
+          跳转至
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -125,7 +128,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../.." title="Huayi&#39;s Notebook" class="md-header__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
+    <a href="../.." title="Huayi&#39;s Notebook" class="md-header__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -145,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              并查集
+              MidnightSunCTF2024
             
           </span>
         </div>
@@ -227,7 +230,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../.." class="md-tabs__link">
+        <a href="../.." class="md-tabs__link">
           
   
     
@@ -243,13 +246,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../oi/" class="md-tabs__link">
           
   
     
@@ -269,7 +270,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../ctf/" class="md-tabs__link">
+        <a href="../../ctf/" class="md-tabs__link">
           
   
     
@@ -285,11 +286,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../ctf_wp/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -324,7 +327,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Huayi&#39;s Notebook" class="md-nav__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
+    <a href="../.." title="Huayi&#39;s Notebook" class="md-nav__button md-logo" aria-label="Huayi's Notebook" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
@@ -374,7 +377,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../.." class="md-nav__link ">
+            <a href="../.." class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -405,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../home/schedule/" class="md-nav__link">
+      <a href="../../home/schedule/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -430,8 +433,6 @@
       
   
   
-    
-  
   
     
     
@@ -454,18 +455,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../../oi/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -481,7 +482,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             📖算法笔记
@@ -517,7 +518,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../dp/" class="md-nav__link ">
+            <a href="../../oi/dp/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -548,7 +549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dp/dp_pack/" class="md-nav__link">
+      <a href="../../oi/dp/dp_pack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,8 +575,6 @@
                 
   
   
-    
-  
   
     
     
@@ -588,13 +587,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
             
@@ -607,7 +606,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             数据结构
@@ -618,16 +617,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../oi/ds/ds_disjoint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -636,7 +628,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -648,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tree_array/" class="md-nav__link">
+      <a href="../../oi/ds/tree_array/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -668,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../segment_tree/" class="md-nav__link">
+      <a href="../../oi/ds/segment_tree/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -734,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../flow/" class="md-nav__link">
+      <a href="../../oi/flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../search/dfs/" class="md-nav__link">
+      <a href="../../oi/search/dfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -782,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../other/" class="md-nav__link">
+      <a href="../../oi/other/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -802,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../stl/" class="md-nav__link">
+      <a href="../../oi/stl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -868,7 +859,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/" class="md-nav__link ">
+            <a href="../../ctf/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -899,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/tools/" class="md-nav__link">
+      <a href="../../ctf/tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -942,7 +933,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/misc/" class="md-nav__link ">
+            <a href="../../ctf/misc/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -973,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/misc/escape/" class="md-nav__link">
+      <a href="../../ctf/misc/escape/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -993,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/misc/qrcode/" class="md-nav__link">
+      <a href="../../ctf/misc/qrcode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1048,7 +1039,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/crypto/" class="md-nav__link ">
+            <a href="../../ctf/crypto/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1079,7 +1070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/crypto/aes/" class="md-nav__link">
+      <a href="../../ctf/crypto/aes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1099,7 +1090,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/crypto/rsa/" class="md-nav__link">
+      <a href="../../ctf/crypto/rsa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/crypto/lwe/" class="md-nav__link">
+      <a href="../../ctf/crypto/lwe/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,7 +1130,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/crypto/ecc/" class="md-nav__link">
+      <a href="../../ctf/crypto/ecc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1194,7 +1185,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/web/" class="md-nav__link ">
+            <a href="../../ctf/web/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1225,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/web/php/" class="md-nav__link">
+      <a href="../../ctf/web/php/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1245,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/web/sql/" class="md-nav__link">
+      <a href="../../ctf/web/sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1265,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/web/ssrf/" class="md-nav__link">
+      <a href="../../ctf/web/ssrf/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/web/xss/" class="md-nav__link">
+      <a href="../../ctf/web/xss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1344,7 +1335,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/reverse/" class="md-nav__link ">
+            <a href="../../ctf/reverse/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1375,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/reverse/asm/" class="md-nav__link">
+      <a href="../../ctf/reverse/asm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1395,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/reverse/unpack/" class="md-nav__link">
+      <a href="../../ctf/reverse/unpack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1415,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/reverse/maze/" class="md-nav__link">
+      <a href="../../ctf/reverse/maze/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1435,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/reverse/go/" class="md-nav__link">
+      <a href="../../ctf/reverse/go/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1455,7 +1446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/reverse/android/" class="md-nav__link">
+      <a href="../../ctf/reverse/android/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1475,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/reverse/vm/" class="md-nav__link">
+      <a href="../../ctf/reverse/vm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1528,7 +1519,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/pwn/" class="md-nav__link ">
+            <a href="../../ctf/pwn/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1559,7 +1550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/pwn/fsb/" class="md-nav__link">
+      <a href="../../ctf/pwn/fsb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/pwn/rop/" class="md-nav__link">
+      <a href="../../ctf/pwn/rop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1599,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/pwn/heap/" class="md-nav__link">
+      <a href="../../ctf/pwn/heap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1646,7 +1637,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/ai/" class="md-nav__link ">
+            <a href="../../ctf/ai/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1681,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/blockchain/" class="md-nav__link">
+      <a href="../../ctf/blockchain/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1701,7 +1692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/osint/" class="md-nav__link">
+      <a href="../../ctf/osint/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1742,7 +1733,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf/cve/" class="md-nav__link ">
+            <a href="../../ctf/cve/" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1773,7 +1764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf/cve/CVE-2017-11610/" class="md-nav__link">
+      <a href="../../ctf/cve/CVE-2017-11610/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,6 +1797,8 @@
       
   
   
+    
+  
   
     
     
@@ -1820,18 +1813,18 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../../ctf_wp/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -1847,7 +1840,7 @@
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             💾CTF Writeup
@@ -1900,7 +1893,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf_wp/ethernaut/" class="md-nav__link">
+      <a href="../ethernaut/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1926,6 +1919,8 @@
                 
   
   
+    
+  
   
     
     
@@ -1940,13 +1935,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" checked>
         
           <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
             
@@ -1959,7 +1954,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4_3">
             <span class="md-nav__icon md-icon"></span>
             🎲Contest
@@ -1972,7 +1967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf_wp/hackgame2023/" class="md-nav__link">
+      <a href="../hackgame2023/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1992,7 +1987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf_wp/beginctf2024/" class="md-nav__link">
+      <a href="../beginctf2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2012,7 +2007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../ctf_wp/plaidctf2024/" class="md-nav__link">
+      <a href="../plaidctf2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2030,9 +2025,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../ctf_wp/midnightsunctf2024/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    MidnightSunCTF2024
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2041,6 +2056,82 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#speeda" class="md-nav__link">
+    speeda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speedb" class="md-nav__link">
+    speedb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speedc" class="md-nav__link">
+    speedc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speedd" class="md-nav__link">
+    speedd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speede" class="md-nav__link">
+    speede
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roborop" class="md-nav__link">
+    roborop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minus10" class="md-nav__link">
+    minus10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rockyoudle" class="md-nav__link">
+    rockyoudle
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2078,6 +2169,72 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#speeda" class="md-nav__link">
+    speeda
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speedb" class="md-nav__link">
+    speedb
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speedc" class="md-nav__link">
+    speedc
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speedd" class="md-nav__link">
+    speedd
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#speede" class="md-nav__link">
+    speede
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#roborop" class="md-nav__link">
+    roborop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minus10" class="md-nav__link">
+    minus10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rockyoudle" class="md-nav__link">
+    rockyoudle
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2095,68 +2252,62 @@
   
 
 
-  <h1>并查集</h1>
-
+<h1 id="midnight-sun-ctf">Midnight Sun CTF</h1>
+<details class="abstract" open="open">
+<summary>Abstract</summary>
+<p>将于赛后收录和复现Midnight Sun CTF中的一些题</p>
+<p><img alt="" src="https://img.shields.io/badge/-Misc-informational?style=flat-square" />
+<img alt="" src="https://img.shields.io/badge/-Crypto-red?style=flat-square" />
+<img alt="" src="https://img.shields.io/badge/-Web-blueviolet?style=flat-square" />
+<img alt="" src="https://img.shields.io/badge/-Reverse-violet?style=flat-square" />
+<img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" />
+<img alt="" src="https://img.shields.io/badge/-AI-brown?style=flat-square" /></p>
 <ul>
-<li>并查集的实现是一个森林，其中每个节点1-n刚开始都是独立的树的根节点，通过维护一个父节点数组来体现哪些节点在一棵树上，一个最基本的带有find和unite操作的并查集实现如下</li>
+<li>本note更新时间在赛后</li>
+<li>🚧施工中&gt;&gt;&gt;</li>
+</ul>
+</details>
+<h3 id="speeda">speeda <img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" /></h3>
+<ul>
+<li>one_gadget</li>
+</ul>
+<h3 id="speedb">speedb <img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" /></h3>
+<h3 id="speedc">speedc <img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" /></h3>
+<h3 id="speedd">speedd <img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" /></h3>
+<h3 id="speede">speede <img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" /></h3>
+<h3 id="roborop">roborop <img alt="" src="https://img.shields.io/badge/-Pwn-grey?style=flat-square" /></h3>
+<h3 id="minus10">minus10 <img alt="" src="https://img.shields.io/badge/-Reverse-violet?style=flat-square" /></h3>
+<ul>
+<li>gcc-msp430-4.6.3</li>
+<li>MSP430系列单片机是美国德州仪器（TI）1996年开始推向市场的一种16位超低功耗、具有精简指令集（RISC）的混合信号处理器（Mixed Signal Processor）。</li>
+<li>.sr文件</li>
 </ul>
 <details class="abstract" open="open">
-<summary>disjoint set</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label></div>
+<summary>exp</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Python</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="language-c++ highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">struct</span><span class="w"> </span><span class="nc">dsu</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="p">{</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">size_t</span><span class="o">&gt;</span><span class="w"> </span><span class="n">pa</span><span class="p">;</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="k">explicit</span><span class="w"> </span><span class="n">dsu</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pa</span><span class="p">(</span><span class="n">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="n">iota</span><span class="p">(</span><span class="n">pa</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">pa</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="n">dsu</span><span class="o">::</span><span class="n">find</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="p">{</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">pa</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">pa</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">pa</span><span class="p">[</span><span class="n">x</span><span class="p">]);</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="kt">void</span><span class="w"> </span><span class="n">dsu</span><span class="o">::</span><span class="n">unite</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="kt">size_t</span><span class="w"> </span><span class="n">y</span><span class="p">)</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="p">{</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="n">pa</span><span class="p">[</span><span class="n">find</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">find</span><span class="p">(</span><span class="n">y</span><span class="p">);</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">  </span><span class="p">}</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="p">};</span>
+<div class="language-python highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">s</span> <span class="o">=</span> <span class="p">[</span><span class="mh">0xbf</span><span class="p">,</span> <span class="mh">0xbe</span><span class="p">,</span> <span class="mh">0xb8</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span> <span class="mh">0x8f</span><span class="p">,</span> <span class="mh">0x8c</span><span class="p">,</span> <span class="mh">0x98</span><span class="p">,</span> <span class="mh">0x81</span><span class="p">,</span> <span class="mh">0x81</span><span class="p">,</span> <span class="mh">0x88</span><span class="p">,</span> <span class="mh">0x65</span><span class="p">,</span> <span class="mh">0x7b</span><span class="p">,</span> <span class="mh">0x63</span><span class="p">,</span> <span class="mh">0x76</span><span class="p">,</span> <span class="mh">0x7c</span><span class="p">,</span> <span class="mh">0x42</span><span class="p">,</span> <span class="mh">0x57</span><span class="p">,</span> <span class="mh">0x57</span><span class="p">,</span> <span class="mh">0x73</span><span class="p">,</span> <span class="mh">0x5e</span><span class="p">,</span> <span class="mh">0x58</span><span class="p">,</span> <span class="mh">0x64</span><span class="p">,</span> <span class="mh">0x0d</span><span class="p">,</span> <span class="mh">0x16</span><span class="p">,</span> <span class="mh">0x1a</span><span class="p">,</span> <span class="mh">0x7b</span><span class="p">,</span> <span class="mh">0x67</span><span class="p">,</span> <span class="mh">0x69</span><span class="p">,</span> <span class="mh">0x23</span><span class="p">]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a>    <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">^</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">-</span> <span class="mh">0x2e</span><span class="p">))</span> <span class="o">%</span> <span class="mi">256</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="n">flag</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">s</span><span class="p">)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nb">print</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
 </span></code></pre></div></td></tr></table></div>
 </div>
 </div>
 </div>
 </details>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> midnight{warmed_up_on_MSP430}</li>
+</ul>
+<h3 id="rockyoudle">rockyoudle <img alt="" src="https://img.shields.io/badge/-Misc-informational?style=flat-square" /></h3>
+<ul>
+<li>wordle带字典</li>
+</ul>
 
 
 
@@ -2186,7 +2337,7 @@
       <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
           
-          <a href="../../dp/dp_pack/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 背包dp" rel="prev">
+          <a href="../plaidctf2024/" class="md-footer__link md-footer__link--prev" aria-label="上一页: PlaidCTF2024" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -2196,27 +2347,11 @@
                 上一页
               </span>
               <div class="md-ellipsis">
-                背包dp
+                PlaidCTF2024
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../tree_array/" class="md-footer__link md-footer__link--next" aria-label="下一页: 树状数组" rel="next">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              <div class="md-ellipsis">
-                树状数组
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -2283,12 +2418,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.tracking", "navigation.tabs", "navigation.path", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.select", "content.code.annotate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../../assets/javascripts/bundle.dff1b7c8.min.js"></script>
       
-        <script src="../../../javascripts/mathjax.js"></script>
+        <script src="../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
