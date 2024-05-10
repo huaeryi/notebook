@@ -1681,12 +1681,18 @@
     off-by-one
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="off-by-one">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#off-by-null" class="md-nav__link">
     off-by-null
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2069,8 +2075,6 @@
       
         
       
-        
-      
     
     
     <li class="md-nav__item md-nav__item--nested">
@@ -2150,26 +2154,6 @@
   
   <span class="md-ellipsis">
     PlaidCTF2024
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../ctf_wp/midnightsunctf2024/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    MidnightSunCTF2024
   </span>
   
 
@@ -2260,12 +2244,18 @@
     off-by-one
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="off-by-one">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#off-by-null" class="md-nav__link">
     off-by-null
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2430,12 +2420,17 @@
 </div>
 </details>
 <ul>
-<li>__free_hook劫持</li>
-<li>脱链</li>
+<li>和off-by-one结合，溢出一个字节，修改堆块的P标志位为0，让堆块认为前一个堆块空闲，free后向前合并，形成大堆块。</li>
+<li>效果就是往chunk里写入chunk-0x18的值，此时修改堆，就能修改到chunk-0x18地址上的内容，可以通过修改got表完成free函数的劫持，如劫持为puts泄露地址，劫持为system拿shell，最后再free掉一个含有"/bin/sh\x00"的堆块地址拿到shell</li>
 </ul>
+<!-- - __free_hook劫持 -->
+
 <h3 id="_2">堆溢出</h3>
 <h3 id="off-by-one">off-by-one</h3>
-<h3 id="off-by-null">off-by-null</h3>
+<ul>
+<li>堆叠（Overlap）</li>
+</ul>
+<h4 id="off-by-null">off-by-null</h4>
 <h3 id="fastbin-attack">fastbin attack</h3>
 <h4 id="fastbin-double-free">fastbin double free</h4>
 <ul>
