@@ -1,16 +1,20 @@
 # Reverse
 
 ### 逆向工具
-* 二进制编辑器
-* IDA强大的逆向分析工具,keypatch补丁修改汇编指令
-* PDB文件保存调试信息
-* Ghidra
-* studyPE
-* `readelf`
-* ILSpy
-* Ollydbg
-* Exeinfo PE
-* tip:为某些windows工具设置环境变量Path`C:\Users\91758\Desktop\tools\upx-4.2.1-win64\upx-4.2.1-win64`
+???+ abstract "tools"
+
+    * 逆向工具
+    * 二进制编辑器
+    * IDA强大的逆向分析工具,keypatch补丁修改汇编指令
+    * PDB文件保存调试信息
+    * Ghidra
+    * studyPE
+    * `readelf`
+    * ILSpy
+    * Ollydbg
+    * Exeinfo PE
+    * tip:为某些windows工具设置环境变量Path`C:\Users\91758\Desktop\tools\upx-4.2.1-win64\upx-4.2.1-win64`
+
 ### angr
 
 ### IDAPython
@@ -34,6 +38,7 @@ for i in range(0x400BB7, 0x400BBC + 1):
 - 自修改代码`Self Modifying Code，动态代码加密技术`
     * 利用IDAPython脚本还原被修改的代码，得到运行时函数
 #### ollvm
+- 控制流平坦化 
 #### 反调试
 
 ### 逆向常见算法
@@ -69,13 +74,9 @@ for i in range(0x400BB7, 0x400BBC + 1):
 * `gcc hello.o -o hello.out`
 * 地址和空间分配、符号决议、重定向
 
-### x86汇编
-* [参考资料](https://huaeryi.github.io/2023/04/24/x86/)
-* 施工中...
 
 ### OS
 * Windows->PE
 * Linux->elf
 * DOS->16bit
 
-### VM虚拟机逆向

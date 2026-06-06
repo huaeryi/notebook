@@ -9,6 +9,7 @@
         * GDB: Linux调试中必要用到的
         * gdb-peda、pwndbg、gef: GDB调试插件
         * windbg: windows环境    
+        * pwngdb: 更多利用和堆的信息
     - 程序信息
         * checksec：可以很方便的知道elf程序的安全性和程序的运行平台
         * objdump ：可以很快的知道elf程序中的关键信息
@@ -69,6 +70,9 @@
 
 #### RELRO
 * 开启说明got表不可修改
+* 为NO RELRO的时候，init.array、fini.array、got.plt均可读可写
+* 为PARTIAL RELRO的时候，ini.array、fini.array可读不可写，got.plt可读可写
+* 为FULL RELRO时，init.array、fini.array、got.plt均可读不可写
 
 #### Canary
 * 堆栈金丝雀，在函数调用时写入cookie，在返回时检查
@@ -77,12 +81,15 @@
 * 栈不可执行
 
 #### ASLR
-* 地址空间随机化ASLR(address space layout randomization)
-* 即PIE
+- 地址空间随机化ASLR(address space layout randomization)
+- 系统功能 
+- 作用于栈基地址（stack）、共享库（.so\libraries）、mmap 基地址、堆基地址（chunk）
 * 0 - 表示关闭进程地址空间随机化
 * 1 - 表示将mmap的基址，stack和vdso页面随机化
 * 2 - 表示在1的基础上增加堆（heap）的随机化
-
+#### PIE
+* 与ASLR不同，是编译选项
+* 作用于代码段（ .text ）、初始化数据段（ .data ）、未初始化数据段（ .bss ）
 
 
 ### x86
@@ -209,6 +216,10 @@
         Low     63----------------<<----------------0
         Address
         ``` -->
-
+### glibc-all-in-one & patchelf
+- glibc-all-in-one下载对应库
+- 查看题目原来的libc和ld “easyheap”为可执行程序 此处为例子`ldd easyheap`
+- 替换libc `patchelf --replace-needed libc.so.6 ./libc-2.23.so ./easyheap`
+- 设置链接器ld文件 `patchelf --set-interpreter ./ld-2.23.so ./easyheap`
 
 

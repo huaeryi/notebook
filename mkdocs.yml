@@ -48,10 +48,12 @@ nav:
       - XSS: ctf/web/xss.md
     - Reverse: 
       - ctf/reverse/index.md
+      - x86汇编: ctf/reverse/asm.md
       - 软件壳: ctf/reverse/unpack.md
       - 迷宫问题: ctf/reverse/maze.md
       - Golang逆向: ctf/reverse/go.md
       - Android逆向: ctf/reverse/android.md
+      - 虚拟机逆向: ctf/reverse/vm.md
     - Pwn: 
       - ctf/pwn/index.md
       - fsb: ctf/pwn/fsb.md
@@ -67,10 +69,18 @@ nav:
       - ctf/cve/index.md
       - Supervisor: ctf/cve/CVE-2017-11610.md
 
-  - 💾CTF赛题收录:
-    - ctf_contest/index.md
-    - Hackgame2023: ctf_contest/hackgame2023.md
-    - BeginCTF2024: ctf_contest/beginctf.md
+  - 💾CTF Writeup:
+    - ctf_wp/index.md
+    - 🛴Train:
+      - Ethernaut: ctf_wp/ethernaut.md
+    - 🎲Contest:
+      - Hackgame2023: ctf_wp/hackgame2023.md
+      - BeginCTF2024: ctf_wp/beginctf2024.md
+      - PlaidCTF2024: ctf_wp/plaidctf2024.md
+      # - MidnightSunCTF2024: ctf_wp/midnightsunctf2024.md
+
+
+
 
 
 theme: 
@@ -168,7 +178,6 @@ extra:
 
 extra_javascript:
   - javascripts/mathjax.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra_css:

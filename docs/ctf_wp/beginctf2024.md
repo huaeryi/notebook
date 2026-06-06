@@ -4,15 +4,13 @@
 
     将于赛后收录BeginCTF中一些尝试过的题
 
-    ![](https:/img.shields.io/badge/-Misc-informational?style=flat-square)
+    ![](https://img.shields.io/badge/-Misc-informational?style=flat-square)
     ![](https://img.shields.io/badge/-Crypto-red?style=flat-square)
     ![](https://img.shields.io/badge/-Web-blueviolet?style=flat-square)
     ![](https://img.shields.io/badge/-Reverse-violet?style=flat-square)
     ![](https://img.shields.io/badge/-Pwn-grey?style=flat-square)
 
-    
     * 本note更新时间在赛后
-    * 🚧施工中>>>
 
 * 拿了自由赛道30名，3501分，很高兴有进步！
 ## Misc
@@ -311,3 +309,7 @@ yuren:1000:aad3b435b51404eeaad3b435b51404ee:e1f04701b92c3bc1e06f3d0aa68471b3:::
 
 - flag{Y0v_h@v3_l3@rn3d_h0vv_t0_f0r3n5ic5}
 - [x] begin{Y0v_h@v3_l3@rn3d_h0vv_t0_f0r3n5ic5}
+
+### 饥渴 C 猫 is hacker!
+- [解析工具](https://github.com/JPaulMora/Duck-Decoder)
+- [x] begin{this_file_is_called_inject_bin_hope_you_like_it!}

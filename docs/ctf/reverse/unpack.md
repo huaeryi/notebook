@@ -8,7 +8,8 @@
 ### 压缩壳
 * AsPack
 * UPX
-* PECompact
+- PECompact
+    - magic number `03 CA 68 00 80 00 00 6A 00 57 FF 11 8B C6 5A 5E 5F 59 5B 5D`之后便是大跳转
 ### 加密壳
 * ASProtect
 * Armadillo穿山甲

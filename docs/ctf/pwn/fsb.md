@@ -11,8 +11,24 @@
   * `%n` - 到目前为止所写的字符数
 * `printf(s);  // s = "%x%x%x"`会泄露栈上的数据，相对于格式化字符串偏移的数据
 
+- [libc库在线查询](https://libc.rip/)
+
 ### 内存修改
 * `payload = p32(addr) + b'%27d' + b'%4$hhn'`形如此类
 ### got表攻击
 
 ### 返回地址攻击
+
+### pwntools中的fsb库
+???+ abstract "fmtstr"
+
+    === "Python"
+
+        ``` python linenums="1"
+        from pwn import *
+
+        context.arch = 'amd64'
+
+        payload = fmtstr_payload(offset, {想要修改的内存地址: 内容})
+
+        ```
